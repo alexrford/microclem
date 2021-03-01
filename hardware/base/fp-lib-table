@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name din61412)(type KiCad)(uri ${KIPRJMOD}/din61412.pretty)(options "")(descr ""))
+  (lib (name graphics)(type KiCad)(uri ${KIPRJMOD}/graphics.pretty)(options "")(descr ""))
+)
