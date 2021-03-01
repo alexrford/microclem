@@ -1,9 +1,0 @@
-EESchema-DOCLIB  Version 2.0
-#
-$CMP 74HCT40103
-D 8-stage down counter
-K counter
-F https://www.ti.com/lit/ds/symlink/cd74hct40103.pdf
-$ENDCMP
-#
-#End Doc Library
