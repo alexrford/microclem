@@ -2067,7 +2067,7 @@ Text Notes 10100 8900 1    50   ~ 0
 We can't use this to preset the IO region,\nbecause ~MP_RST~ is held low
 Text Notes 800  6700 0    50   ~ 10
 Reset signals
-Text Notes 3650 4350 0    50   ~ 10
+Text Notes 4250 4400 0    50   ~ 10
 Clock generator/divider
 Wire Wire Line
 	5850 5050 5850 4850
@@ -5750,6 +5750,11 @@ F 3 "http://cdn-reichelt.de/documents/datenblatt/B400/OSZI.pdf" H 3300 4750 50  
 	1    3400 4750
 	1    0    0    -1  
 $EndComp
+Text GLabel 3700 4550 1    50   Input ~ 0
+BASE_CLK
+Wire Wire Line
+	3700 4550 3700 4750
+Connection ~ 3700 4750
 Wire Wire Line
 	21150 7600 21950 7600
 Wire Bus Line
