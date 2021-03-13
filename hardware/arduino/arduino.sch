@@ -1841,6 +1841,158 @@ Text GLabel 8050 3200 0    50   Input ~ 0
 52
 Wire Wire Line
 	8100 3200 8050 3200
+$Comp
+L Connector_Generic:Conn_02x02_Odd_Even J?
+U 1 1 606B25A9
+P 1050 6050
+F 0 "J?" H 1100 6267 50  0000 C CNN
+F 1 "Conn_02x02_Odd_Even" H 1100 6176 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical" H 1050 6050 50  0001 C CNN
+F 3 "~" H 1050 6050 50  0001 C CNN
+	1    1050 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #5v?
+U 1 1 606B33D3
+P 1550 6050
+F 0 "#5v?" H 1550 5900 50  0001 C CNN
+F 1 "+5V" H 1550 6150 50  0000 L CNN
+F 2 "" H 1550 6050 50  0001 C CNN
+F 3 "" H 1550 6050 50  0001 C CNN
+	1    1550 6050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 6050 1350 6050
+Wire Wire Line
+	1550 6050 1550 6150
+Wire Wire Line
+	1550 6150 1350 6150
+Connection ~ 1550 6050
+$Comp
+L power:+5V #5v?
+U 1 1 607C0DD8
+P 650 6050
+F 0 "#5v?" H 650 5900 50  0001 C CNN
+F 1 "+5V" H 650 6150 50  0000 L CNN
+F 2 "" H 650 6050 50  0001 C CNN
+F 3 "" H 650 6050 50  0001 C CNN
+	1    650  6050
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	650  6050 850  6050
+Wire Wire Line
+	650  6050 650  6150
+Wire Wire Line
+	650  6150 850  6150
+Connection ~ 650  6050
+$Comp
+L Connector_Generic:Conn_02x02_Odd_Even J?
+U 1 1 6086644F
+P 1050 6550
+F 0 "J?" H 1100 6767 50  0000 C CNN
+F 1 "Conn_02x02_Odd_Even" H 1100 6676 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical" H 1050 6550 50  0001 C CNN
+F 3 "~" H 1050 6550 50  0001 C CNN
+	1    1050 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #5v?
+U 1 1 60866455
+P 1550 6550
+F 0 "#5v?" H 1550 6400 50  0001 C CNN
+F 1 "+5V" H 1550 6650 50  0000 L CNN
+F 2 "" H 1550 6550 50  0001 C CNN
+F 3 "" H 1550 6550 50  0001 C CNN
+	1    1550 6550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 6550 1350 6550
+Wire Wire Line
+	1550 6550 1550 6650
+Wire Wire Line
+	1550 6650 1350 6650
+Connection ~ 1550 6550
+$Comp
+L power:+5V #5v?
+U 1 1 60866460
+P 650 6550
+F 0 "#5v?" H 650 6400 50  0001 C CNN
+F 1 "+5V" H 650 6650 50  0000 L CNN
+F 2 "" H 650 6550 50  0001 C CNN
+F 3 "" H 650 6550 50  0001 C CNN
+	1    650  6550
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	650  6550 850  6550
+Wire Wire Line
+	650  6550 650  6650
+Wire Wire Line
+	650  6650 850  6650
+Connection ~ 650  6550
+$Comp
+L Connector_Generic:Conn_02x02_Odd_Even J?
+U 1 1 6089F2A9
+P 1050 7050
+F 0 "J?" H 1100 7267 50  0000 C CNN
+F 1 "Conn_02x02_Odd_Even" H 1100 7176 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical" H 1050 7050 50  0001 C CNN
+F 3 "~" H 1050 7050 50  0001 C CNN
+	1    1050 7050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 7050 1350 7050
+Wire Wire Line
+	1550 7050 1550 7150
+Wire Wire Line
+	1550 7150 1350 7150
+Wire Wire Line
+	650  7050 850  7050
+Wire Wire Line
+	650  7050 650  7150
+Wire Wire Line
+	650  7150 850  7150
+$Comp
+L Connector_Generic:Conn_02x02_Odd_Even J?
+U 1 1 608DA2F4
+P 1050 7550
+F 0 "J?" H 1100 7767 50  0000 C CNN
+F 1 "Conn_02x02_Odd_Even" H 1100 7676 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical" H 1050 7550 50  0001 C CNN
+F 3 "~" H 1050 7550 50  0001 C CNN
+	1    1050 7550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 7550 1350 7550
+Wire Wire Line
+	1550 7550 1550 7650
+Wire Wire Line
+	1550 7650 1350 7650
+Wire Wire Line
+	650  7550 850  7550
+Wire Wire Line
+	650  7550 650  7650
+Wire Wire Line
+	650  7650 850  7650
+$Comp
+L power:GND #gnd?
+U 1 1 6091637C
+P 650 7150
+F 0 "#gnd?" H 650 6900 50  0001 C CNN
+F 1 "GND" H 655 6977 50  0000 C CNN
+F 2 "" H 650 7150 50  0001 C CNN
+F 3 "" H 650 7150 50  0001 C CNN
+	1    650  7150
+	1    0    0    -1  
+$EndComp
+Connection ~ 650  7150
 Wire Wire Line
 	9350 6400 10150 6400
 Wire Bus Line
@@ -1867,4 +2019,40 @@ Wire Bus Line
 	5450 5750 5450 7600
 Wire Bus Line
 	9250 -750 9250 3900
+$Comp
+L power:GND #gnd?
+U 1 1 60A08CF8
+P 1550 7150
+F 0 "#gnd?" H 1550 6900 50  0001 C CNN
+F 1 "GND" H 1555 6977 50  0000 C CNN
+F 2 "" H 1550 7150 50  0001 C CNN
+F 3 "" H 1550 7150 50  0001 C CNN
+	1    1550 7150
+	1    0    0    -1  
+$EndComp
+Connection ~ 1550 7150
+$Comp
+L power:GND #gnd?
+U 1 1 60A09AEB
+P 1550 7650
+F 0 "#gnd?" H 1550 7400 50  0001 C CNN
+F 1 "GND" H 1555 7477 50  0000 C CNN
+F 2 "" H 1550 7650 50  0001 C CNN
+F 3 "" H 1550 7650 50  0001 C CNN
+	1    1550 7650
+	1    0    0    -1  
+$EndComp
+Connection ~ 1550 7650
+$Comp
+L power:GND #gnd?
+U 1 1 60A09D56
+P 650 7650
+F 0 "#gnd?" H 650 7400 50  0001 C CNN
+F 1 "GND" H 655 7477 50  0000 C CNN
+F 2 "" H 650 7650 50  0001 C CNN
+F 3 "" H 650 7650 50  0001 C CNN
+	1    650  7650
+	1    0    0    -1  
+$EndComp
+Connection ~ 650  7650
 $EndSCHEMATC
