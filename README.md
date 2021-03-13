@@ -11,4 +11,5 @@ This is in an early stage of development and may not be functional yet.
 - DIN 41612 footprints are taken from the [official `kicad-footprints` repo](https://github.com/KiCad/kicad-footprints)
 - System/bus clock switching component taken from an [EE times article by Rafey Mahmud](https://www.eetimes.com/techniques-to-make-clock-switching-glitch-free/)
 - [Ben Eater's 6502 computer](https://eater.net/6502) was the initial inspiration for this project
+- Arduino monitor PCB layout based on measurements from [Wayne and Layne](https://www.wayneandlayne.com/blog/2010/12/19/nice-drawings-of-the-arduino-uno-and-mega-2560/)
 
