@@ -60,45 +60,45 @@ $EndComp
 $Comp
 L Mechanical:MountingHole H4
 U 1 1 6046743B
-P -850 -7950
-F 0 "H4" H -750 -7904 50  0000 L CNN
-F 1 "MountingHole" H -750 -7995 50  0000 L CNN
-F 2 "rails:SHF8-R" H -850 -7950 50  0001 C CNN
-F 3 "~" H -850 -7950 50  0001 C CNN
-	1    -850 -7950
+P -2500 8100
+F 0 "H4" H -2400 8146 50  0000 L CNN
+F 1 "MountingHole" H -2400 8055 50  0000 L CNN
+F 2 "rails:SHF8-L" H -2500 8100 50  0001 C CNN
+F 3 "~" H -2500 8100 50  0001 C CNN
+	1    -2500 8100
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H3
 U 1 1 604683EA
-P -950 -8550
-F 0 "H3" H -850 -8504 50  0000 L CNN
-F 1 "MountingHole" H -850 -8595 50  0000 L CNN
-F 2 "rails:SHF8-L" H -950 -8550 50  0001 C CNN
-F 3 "~" H -950 -8550 50  0001 C CNN
-	1    -950 -8550
+P -2600 7500
+F 0 "H3" H -2500 7546 50  0000 L CNN
+F 1 "MountingHole" H -2500 7455 50  0000 L CNN
+F 2 "rails:SHF8-L" H -2600 7500 50  0001 C CNN
+F 3 "~" H -2600 7500 50  0001 C CNN
+	1    -2600 7500
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H2
 U 1 1 60468515
-P -1050 -9000
-F 0 "H2" H -950 -8954 50  0000 L CNN
-F 1 "MountingHole" H -950 -9045 50  0000 L CNN
-F 2 "rails:SHF8-R" H -1050 -9000 50  0001 C CNN
-F 3 "~" H -1050 -9000 50  0001 C CNN
-	1    -1050 -9000
+P -2700 7050
+F 0 "H2" H -2600 7096 50  0000 L CNN
+F 1 "MountingHole" H -2600 7005 50  0000 L CNN
+F 2 "rails:SHF8-R" H -2700 7050 50  0001 C CNN
+F 3 "~" H -2700 7050 50  0001 C CNN
+	1    -2700 7050
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H1
 U 1 1 604686C3
-P -1050 -9550
-F 0 "H1" H -950 -9504 50  0000 L CNN
-F 1 "MountingHole" H -950 -9595 50  0000 L CNN
-F 2 "rails:SHF8-L" H -1050 -9550 50  0001 C CNN
-F 3 "~" H -1050 -9550 50  0001 C CNN
-	1    -1050 -9550
+P -2700 6500
+F 0 "H1" H -2600 6546 50  0000 L CNN
+F 1 "MountingHole" H -2600 6455 50  0000 L CNN
+F 2 "rails:SHF8-L" H -2700 6500 50  0001 C CNN
+F 3 "~" H -2700 6500 50  0001 C CNN
+	1    -2700 6500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
