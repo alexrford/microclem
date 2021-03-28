@@ -157,7 +157,6 @@ module top_panel(offsets) {
   }
 }
 
-
 module top_and_bottom_panels() {
   color("teal") {
     top_panel([0,0,0]);
@@ -166,11 +165,9 @@ module top_and_bottom_panels() {
   }
 }
 
-
-
 pcb_thickness = 1.6;
-backplane_width = 199.00;
-backplane_height = 123.00;
+backplane_width = 200.00;
+backplane_height = 124.00;
 
 backplane_rear_to_back_panel_inner = 175.00;
 
@@ -374,7 +371,6 @@ module large_lcd() {
     }
   }
 }
-
 
 translate([-(total_width/2),-(total_height/2),-(total_depth/2)]) {
   front_and_rear_panels();
