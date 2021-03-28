@@ -63,7 +63,7 @@ U 1 1 6046743B
 P 12150 5500
 F 0 "H4" H 12250 5546 50  0000 L CNN
 F 1 "MountingHole" H 12250 5455 50  0000 L CNN
-F 2 "rails:8mm" H 12150 5500 50  0001 C CNN
+F 2 "rails:m5-close" H 12150 5500 50  0001 C CNN
 F 3 "~" H 12150 5500 50  0001 C CNN
 	1    12150 5500
 	1    0    0    -1  
@@ -74,7 +74,7 @@ U 1 1 604683EA
 P 12150 5250
 F 0 "H3" H 12250 5296 50  0000 L CNN
 F 1 "MountingHole" H 12250 5205 50  0000 L CNN
-F 2 "rails:8mm" H 12150 5250 50  0001 C CNN
+F 2 "rails:m5-close" H 12150 5250 50  0001 C CNN
 F 3 "~" H 12150 5250 50  0001 C CNN
 	1    12150 5250
 	1    0    0    -1  
@@ -85,7 +85,7 @@ U 1 1 60468515
 P 12150 5000
 F 0 "H2" H 12250 5046 50  0000 L CNN
 F 1 "MountingHole" H 12250 4955 50  0000 L CNN
-F 2 "rails:8mm" H 12150 5000 50  0001 C CNN
+F 2 "rails:m5-close" H 12150 5000 50  0001 C CNN
 F 3 "~" H 12150 5000 50  0001 C CNN
 	1    12150 5000
 	1    0    0    -1  
@@ -96,7 +96,7 @@ U 1 1 604686C3
 P 12150 4750
 F 0 "H1" H 12250 4796 50  0000 L CNN
 F 1 "MountingHole" H 12250 4705 50  0000 L CNN
-F 2 "rails:8mm" H 12150 4750 50  0001 C CNN
+F 2 "rails:m5-close" H 12150 4750 50  0001 C CNN
 F 3 "~" H 12150 4750 50  0001 C CNN
 	1    12150 4750
 	1    0    0    -1  
@@ -4754,28 +4754,6 @@ F 3 "~" H -500 -2650 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	-650 -2650 -700 -2650
-$Comp
-L Mechanical:MountingHole H5
-U 1 1 A242A775
-P 13700 4850
-F 0 "H5" H 13800 4896 50  0000 L CNN
-F 1 "MountingHole" H 13800 4805 50  0000 L CNN
-F 2 "rails:7mm" H 13700 4850 50  0001 C CNN
-F 3 "~" H 13700 4850 50  0001 C CNN
-	1    13700 4850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H6
-U 1 1 A2589AFB
-P 13700 5250
-F 0 "H6" H 13800 5296 50  0000 L CNN
-F 1 "MountingHole" H 13800 5205 50  0000 L CNN
-F 2 "rails:7mm" H 13700 5250 50  0001 C CNN
-F 3 "~" H 13700 5250 50  0001 C CNN
-	1    13700 5250
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:D_Schottky_x2_KCom_AAK D3
 U 1 1 A283533D
