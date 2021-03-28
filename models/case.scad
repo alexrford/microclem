@@ -46,11 +46,11 @@ module front_panel(offsets) {
     difference() {
       translate([0, sub_height_offset, 0])
       cube([alu_thickness, sub_height, sub_depth]);
-    
+
       for(offset = [0:screw_hole_count - 1]) {
-        translate([0, screw_hole_y_offset + sub_height_offset + (offset*screw_hole_pitch), screw_hole_z_offset])
-        rotate([0,90,0])
-        cylinder(alu_thickness, screw_hole_radius, screw_hole_radius);
+	translate([0, screw_hole_y_offset + sub_height_offset + (offset*screw_hole_pitch), screw_hole_z_offset])
+	rotate([0,90,0])
+	cylinder(alu_thickness, screw_hole_radius, screw_hole_radius);
       }
     }
   }
@@ -61,20 +61,20 @@ module fp_rear(x_offset) {
     difference() {
       translate([0, sub_height_offset, sub_depth - alu_thickness])
       cube([insert_width, sub_height, alu_thickness]);
-    
+
       for(offset = [0:insert_hole_count - 1]) {
-        translate([insert_hole_x_offset, insert_hole_y_offset + (offset*insert_hole_pitch), sub_depth - alu_thickness])
-        cylinder(alu_thickness, insert_hole_radius, insert_hole_radius);
+	translate([insert_hole_x_offset, insert_hole_y_offset + (offset*insert_hole_pitch), sub_depth - alu_thickness])
+	cylinder(alu_thickness, insert_hole_radius, insert_hole_radius);
       }
     }
   }
 }
 
    cube([outer_width, outer_height, alu_thickness]);
-  
+
     fp_sides(0);
     fp_sides(outer_width - alu_thickness);
-  
+
     fp_rear(0);
     rotate([0,180,0])
     translate([-outer_width * 2, 0, -sub_depth * 2 + alu_thickness])
@@ -100,22 +100,22 @@ module top_panel(offsets) {
   module side_panel(x_offset) {
     translate([x_offset, 0, 0]) {
       difference() {
-        cube([steel_thickness, total_height / 2, total_depth]);
-        for(offset = [0:1]) {
-          translate([0, screw_hole_outer_y_offset, screw_hole_outer_z_offset + screw_hole_outer_z_pitch * offset])
-          rotate([0,90,0])
-          cylinder(steel_thickness, screw_hole_radius, screw_hole_radius);
-        }
-        for(offset = [0:vent_count - 1]) {
-          translate([0, vent_y_offset, vent_z_offset + vent_pitch * offset])
-          cube([steel_thickness, vent_height, vent_width]);
-        }
+	cube([steel_thickness, total_height / 2, total_depth]);
+	for(offset = [0:1]) {
+	  translate([0, screw_hole_outer_y_offset, screw_hole_outer_z_offset + screw_hole_outer_z_pitch * offset])
+	  rotate([0,90,0])
+	  cylinder(steel_thickness, screw_hole_radius, screw_hole_radius);
+	}
+	for(offset = [0:vent_count - 1]) {
+	  translate([0, vent_y_offset, vent_z_offset + vent_pitch * offset])
+	  cube([steel_thickness, vent_height, vent_width]);
+	}
       }
     }
   }
   translate(offsets) {
     cube([total_width, steel_thickness, total_depth]);
-    
+
     side_panel(0);
     side_panel(total_width - steel_thickness);
   }
@@ -196,7 +196,7 @@ module backplane() {
 		cube([backplane_width, backplane_height, pcb_thickness]);
 		mounting_holes();
 	}
-		
+
 	for (card_count=[0:3]) {
 		translate([first_card_offset + (ec1_width + ec2_width) * card_count, backplane_y_offset + (backplane_height - din_female_width)/2, pcb_thickness]) {
 			din_female();
@@ -212,7 +212,7 @@ backplane();
 eurocard_depth = 160.00;
 eurocard_height = 100.00;
 
-first_card_offset = (backplane_width - (ec1_width + ec2_width)*4) / 2; 
+first_card_offset = (backplane_width - (ec1_width + ec2_width)*4) / 2;
 
 din_connector_allowance = (backplane_rear_to_back_panel_inner - pcb_thickness - eurocard_depth);
 
