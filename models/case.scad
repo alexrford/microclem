@@ -47,14 +47,14 @@ module front_panel(offsets) {
   module fp_sides(x_offset) {
     translate([x_offset, 0, 0]) {
       difference() {
-	translate([0, sub_height_offset, 0])
-	  cube([alu_thickness, sub_height, sub_depth]);
+        translate([0, sub_height_offset, 0])
+          cube([alu_thickness, sub_height, sub_depth]);
 
-	for(offset = [0:screw_hole_count - 1]) {
-	  translate([0, screw_hole_y_offset + sub_height_offset + (offset*screw_hole_pitch), screw_hole_z_offset])
-	    rotate([0,90,0])
-	    cylinder(alu_thickness, screw_hole_radius, screw_hole_radius);
-	}
+        for(offset = [0:screw_hole_count - 1]) {
+          translate([0, screw_hole_y_offset + sub_height_offset + (offset*screw_hole_pitch), screw_hole_z_offset])
+            rotate([0,90,0])
+            cylinder(alu_thickness, screw_hole_radius, screw_hole_radius);
+        }
       }
     }
   }
@@ -62,13 +62,13 @@ module front_panel(offsets) {
   module fp_rear(x_offset) {
     translate([x_offset, 0, 0]) {
       difference() {
-	translate([0, sub_height_offset, sub_depth - alu_thickness])
-	  cube([insert_width, sub_height, alu_thickness]);
+        translate([0, sub_height_offset, sub_depth - alu_thickness])
+          cube([insert_width, sub_height, alu_thickness]);
 
-	for(offset = [0:insert_hole_count - 1]) {
-	  translate([insert_hole_x_offset, insert_hole_y_offset + (offset*insert_hole_pitch), sub_depth - alu_thickness])
-	    cylinder(alu_thickness, insert_hole_radius, insert_hole_radius);
-	}
+        for(offset = [0:insert_hole_count - 1]) {
+          translate([insert_hole_x_offset, insert_hole_y_offset + (offset*insert_hole_pitch), sub_depth - alu_thickness])
+            cylinder(alu_thickness, insert_hole_radius, insert_hole_radius);
+        }
       }
     }
   }
@@ -107,25 +107,25 @@ module front_and_rear_panels() {
   difference() {
     translate([steel_thickness, (total_height - outer_height) / 2, front_panel_depth]) {
       color("white")
-	front_panel();
+        front_panel();
     }
     translate([lcd_x_offset + ((lcd_pcb_width - lcd_va_width) / 2), lcd_y_offset + ((lcd_pcb_height - lcd_va_height) / 2), front_panel_depth]) {
-	cube([lcd_va_width, lcd_va_height, alu_thickness]);
+      cube([lcd_va_width, lcd_va_height, alu_thickness]);
     }
 
     translate([lcd_x_offset, lcd_y_offset, front_panel_depth]) {
       translate([lcd_hole_offset, lcd_hole_offset, 0])
-	cylinder(alu_thickness, lcd_hole_diameter / 2, lcd_hole_diameter / 2);
+        cylinder(alu_thickness, lcd_hole_diameter / 2, lcd_hole_diameter / 2);
       translate([lcd_pcb_width - lcd_hole_offset, lcd_hole_offset, 0])
-	cylinder(alu_thickness, lcd_hole_diameter / 2, lcd_hole_diameter / 2);
+        cylinder(alu_thickness, lcd_hole_diameter / 2, lcd_hole_diameter / 2);
       translate([lcd_pcb_width - lcd_hole_offset, lcd_pcb_height - lcd_hole_offset, 0])
-	cylinder(alu_thickness, lcd_hole_diameter / 2, lcd_hole_diameter / 2);
+        cylinder(alu_thickness, lcd_hole_diameter / 2, lcd_hole_diameter / 2);
       translate([lcd_hole_offset, lcd_pcb_height - lcd_hole_offset, 0])
-	cylinder(alu_thickness, lcd_hole_diameter / 2, lcd_hole_diameter / 2);
-    }      
+        cylinder(alu_thickness, lcd_hole_diameter / 2, lcd_hole_diameter / 2);
+    }
   }
 
-  translate([steel_thickness, total_height - (total_height - outer_height) / 2, total_depth - front_panel_depth]) 
+  translate([steel_thickness, total_height - (total_height - outer_height) / 2, total_depth - front_panel_depth])
     color("#555555")
     rotate([180, 0, 0])
     front_panel();
@@ -136,16 +136,16 @@ module top_panel(offsets) {
   module side_panel(x_offset) {
     translate([x_offset, 0, 0]) {
       difference() {
-	cube([steel_thickness, total_height / 2, total_depth]);
-	for(offset = [0:1]) {
-	  translate([0, screw_hole_outer_y_offset, screw_hole_outer_z_offset + screw_hole_outer_z_pitch * offset])
-	    rotate([0,90,0])
-	    cylinder(steel_thickness, screw_hole_radius, screw_hole_radius);
-	}
-	for(offset = [0:vent_count - 1]) {
-	  translate([0, vent_y_offset, vent_z_offset + vent_pitch * offset])
-	    cube([steel_thickness, vent_height, vent_width]);
-	}
+        cube([steel_thickness, total_height / 2, total_depth]);
+        for(offset = [0:1]) {
+          translate([0, screw_hole_outer_y_offset, screw_hole_outer_z_offset + screw_hole_outer_z_pitch * offset])
+            rotate([0,90,0])
+            cylinder(steel_thickness, screw_hole_radius, screw_hole_radius);
+        }
+        for(offset = [0:vent_count - 1]) {
+          translate([0, vent_y_offset, vent_z_offset + vent_pitch * offset])
+            cube([steel_thickness, vent_height, vent_width]);
+        }
       }
     }
   }
@@ -204,19 +204,19 @@ module backplane() {
   module mounting_holes() {
     translate([mounting_hole_pcb_x_offset, mounting_hole_pcb_y_offset, 0]) {
       translate([0, 1*insert_hole_pitch, 0]) {
-	mounting_hole(large_mounting_hole_radius);
-	translate([insert_hole_x_pitch, 0, 0])
-	  mounting_hole(large_mounting_hole_radius);
+        mounting_hole(large_mounting_hole_radius);
+        translate([insert_hole_x_pitch, 0, 0])
+          mounting_hole(large_mounting_hole_radius);
       }
       translate([0, 4*insert_hole_pitch, 0]) {
-	mounting_hole(small_mounting_hole_radius);
-	translate([insert_hole_x_pitch, 0, 0])
-	  mounting_hole(small_mounting_hole_radius);
+        mounting_hole(small_mounting_hole_radius);
+        translate([insert_hole_x_pitch, 0, 0])
+          mounting_hole(small_mounting_hole_radius);
       }
       translate([0, 6*insert_hole_pitch, 0]) {
-	mounting_hole(large_mounting_hole_radius);
-	translate([insert_hole_x_pitch, 0, 0])
-	  mounting_hole(large_mounting_hole_radius);
+        mounting_hole(large_mounting_hole_radius);
+        translate([insert_hole_x_pitch, 0, 0])
+          mounting_hole(large_mounting_hole_radius);
       }
     }
   }
@@ -225,15 +225,15 @@ module backplane() {
 
     difference() {
       color("orange")
-	cube([backplane_width, backplane_height, pcb_thickness]);
+        cube([backplane_width, backplane_height, pcb_thickness]);
       mounting_holes();
     }
 
     for (card_count=[0:3]) {
       translate([first_card_offset + (ec1_width + ec2_width) * card_count, backplane_y_offset + (backplane_height - din_female_width)/2, pcb_thickness]) {
-	din_female();
-	translate([ec1_width, 0, 0])
-	  din_female();
+        din_female();
+        translate([ec1_width, 0, 0])
+          din_female();
       }
     }
   }
@@ -262,10 +262,10 @@ module eurocards() {
   module eurocard(offsets) {
     rotate([0, 270, 0]) {
       color("orange")
-	cube([eurocard_depth, eurocard_height, pcb_thickness]);
+        cube([eurocard_depth, eurocard_height, pcb_thickness]);
       rotate(90)
-	translate([din_male_x_offset, -din_male_pcb_overlap, pcb_thickness - din_male_depth])
-	din_male();
+        translate([din_male_x_offset, -din_male_pcb_overlap, pcb_thickness - din_male_depth])
+        din_male();
     }
   }
 
@@ -273,7 +273,7 @@ module eurocards() {
     translate([backplane_x_offset + first_card_offset + pcb_thickness + (ec1_width + ec2_width) * card_pair_count, backplane_y_offset + (backplane_height - din_male_width)/2, backplane_z_offset + pcb_thickness + din_connector_allowance]) {
       eurocard();
       translate([ec1_width, 0, 0])
-	eurocard();
+        eurocard();
     }
   }
 }
@@ -301,8 +301,8 @@ module support_rods() {
   module support_sleeve(offsets) {
     translate(offsets) {
       difference() {
-	cylinder(support_sleeve_length, support_sleeve_od/2, support_sleeve_od/2);
-	cylinder(support_sleeve_length, support_sleeve_id/2, support_sleeve_id/2);
+        cylinder(support_sleeve_length, support_sleeve_od/2, support_sleeve_od/2);
+        cylinder(support_sleeve_length, support_sleeve_id/2, support_sleeve_id/2);
       }
     }
   }
@@ -312,7 +312,6 @@ module support_rods() {
       cylinder(securing_rod_length, support_rod_od/2, support_rod_od/2);
     }
   }
-
 
   translate([insert_hole_x_offset + steel_thickness, steel_thickness + insert_hole_y_offset, 0]) {
     translate([0, 0, support_rod_z_offset]) {
@@ -344,21 +343,21 @@ module large_lcd() {
   bezel_depth = 4.70;
 
   translate([lcd_x_offset, lcd_y_offset, front_panel_depth + alu_thickness + bezel_depth]) {
-    difference() {      
+    difference() {
       color("green")
-	cube([lcd_pcb_width, lcd_pcb_height, lcd_pcb_thickness]);
+        cube([lcd_pcb_width, lcd_pcb_height, lcd_pcb_thickness]);
 
       translate([lcd_hole_offset, lcd_hole_offset, 0])
-	cylinder(lcd_pcb_thickness, lcd_hole_diameter / 2, lcd_hole_diameter / 2);
+        cylinder(lcd_pcb_thickness, lcd_hole_diameter / 2, lcd_hole_diameter / 2);
 
       translate([lcd_pcb_width - lcd_hole_offset, lcd_hole_offset, 0])
-	cylinder(lcd_pcb_thickness, lcd_hole_diameter / 2, lcd_hole_diameter / 2);
+        cylinder(lcd_pcb_thickness, lcd_hole_diameter / 2, lcd_hole_diameter / 2);
 
       translate([lcd_hole_offset, lcd_pcb_height - lcd_hole_offset, 0])
-	cylinder(lcd_pcb_thickness, lcd_hole_diameter / 2, lcd_hole_diameter / 2);
+        cylinder(lcd_pcb_thickness, lcd_hole_diameter / 2, lcd_hole_diameter / 2);
 
       translate([lcd_pcb_width - lcd_hole_offset, lcd_pcb_height - lcd_hole_offset, 0])
-	cylinder(lcd_pcb_thickness, lcd_hole_diameter / 2, lcd_hole_diameter / 2);
+        cylinder(lcd_pcb_thickness, lcd_hole_diameter / 2, lcd_hole_diameter / 2);
     }
 
     %color("red")
@@ -366,17 +365,14 @@ module large_lcd() {
        cube([lcd_pcb_width, lcd_pcb_height, rear_clearance]);
 
     translate([(lcd_pcb_width - bezel_width) / 2, (lcd_pcb_height - bezel_height) / 2, -bezel_depth])
-    difference() {
+      difference() {
       color("black")
-	cube([bezel_width, bezel_height, bezel_depth]);
+        cube([bezel_width, bezel_height, bezel_depth]);
       color("blue")
-	translate([(bezel_width - lcd_va_width) / 2, (bezel_height - lcd_va_height) / 2, 0])
-	cube([lcd_va_width, lcd_va_height, 1]);
+        translate([(bezel_width - lcd_va_width) / 2, (bezel_height - lcd_va_height) / 2, 0])
+        cube([lcd_va_width, lcd_va_height, 1]);
     }
   }
-
-
-  
 }
 
 
