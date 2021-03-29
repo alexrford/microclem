@@ -4,7 +4,7 @@ alu_thickness = 1.63;
 
 sub_height = 121.46;
 sub_height_offset = (outer_height - sub_height) / 2;
-sub_depth = 15.88;
+fp_depth = 15.88;
 
 insert_gap = 168.45;
 insert_width = (outer_width - insert_gap) / 2;
@@ -40,15 +40,14 @@ vent_y_offset = 33.34;
 vent_z_offset = 34.94;
 vent_count = 20;
 
-front_panel_depth = (total_depth - front_to_rear_panel_outer) / 2;
-rear_panel_z_gap = (total_depth - front_to_rear_panel_outer) / 2;
+front_panel_z_offset = (total_depth - front_to_rear_panel_outer) / 2;
 
 module front_panel(offsets) {
   module fp_sides(x_offset) {
     translate([x_offset, 0, 0]) {
       difference() {
         translate([0, sub_height_offset, 0])
-          cube([alu_thickness, sub_height, sub_depth]);
+          cube([alu_thickness, sub_height, fp_depth]);
 
         for(offset = [0:screw_hole_count - 1]) {
           translate([0, screw_hole_y_offset + sub_height_offset + (offset*screw_hole_pitch), screw_hole_z_offset])
@@ -62,11 +61,11 @@ module front_panel(offsets) {
   module fp_rear(x_offset) {
     translate([x_offset, 0, 0]) {
       difference() {
-        translate([0, sub_height_offset, sub_depth - alu_thickness])
+        translate([0, sub_height_offset, fp_depth - alu_thickness])
           cube([insert_width, sub_height, alu_thickness]);
 
         for(offset = [0:insert_hole_count - 1]) {
-          translate([insert_hole_x_offset, insert_hole_y_offset + (offset*insert_hole_pitch), sub_depth - alu_thickness])
+          translate([insert_hole_x_offset, insert_hole_y_offset + (offset*insert_hole_pitch), fp_depth - alu_thickness])
             cylinder(alu_thickness, insert_hole_radius, insert_hole_radius);
         }
       }
@@ -84,7 +83,7 @@ module front_panel(offsets) {
 
   fp_rear(0);
   rotate([0,180,0])
-    translate([-outer_width * 2, 0, -sub_depth * 2 + alu_thickness])
+    translate([-outer_width * 2, 0, -fp_depth * 2 + alu_thickness])
     fp_rear(outer_width);
 }
 
@@ -105,15 +104,15 @@ lcd_hole_offset = 2.50;
 module front_and_rear_panels() {
   // render front and rear panels
   difference() {
-    translate([steel_thickness, (total_height - outer_height) / 2, front_panel_depth]) {
+    translate([steel_thickness, (total_height - outer_height) / 2, front_panel_z_offset]) {
       color("white")
         front_panel();
     }
-    translate([lcd_x_offset + ((lcd_pcb_width - lcd_va_width) / 2), lcd_y_offset + ((lcd_pcb_height - lcd_va_height) / 2), front_panel_depth]) {
+    translate([lcd_x_offset + ((lcd_pcb_width - lcd_va_width) / 2), lcd_y_offset + ((lcd_pcb_height - lcd_va_height) / 2), front_panel_z_offset]) {
       cube([lcd_va_width, lcd_va_height, alu_thickness]);
     }
 
-    translate([lcd_x_offset, lcd_y_offset, front_panel_depth]) {
+    translate([lcd_x_offset, lcd_y_offset, front_panel_z_offset]) {
       translate([lcd_hole_offset, lcd_hole_offset, 0])
         cylinder(alu_thickness, lcd_hole_diameter / 2, lcd_hole_diameter / 2);
       translate([lcd_pcb_width - lcd_hole_offset, lcd_hole_offset, 0])
@@ -125,7 +124,7 @@ module front_and_rear_panels() {
     }
   }
 
-  translate([steel_thickness, total_height - (total_height - outer_height) / 2, total_depth - front_panel_depth])
+  translate([steel_thickness, total_height - (total_height - outer_height) / 2, total_depth - front_panel_z_offset])
     color("#555555")
     rotate([180, 0, 0])
     front_panel();
@@ -174,7 +173,7 @@ backplane_rear_to_back_panel_inner = 175.00;
 backplane_x_offset = (total_height - backplane_height) / 2;
 backplane_y_offset = (total_width - backplane_width) / 2;
 
-backplane_z_offset = total_depth - rear_panel_z_gap - alu_thickness - backplane_rear_to_back_panel_inner;
+backplane_z_offset = total_depth - front_panel_z_offset - alu_thickness - backplane_rear_to_back_panel_inner;
 
 din_female_width = 94.90;
 din_female_height = 10.50;
@@ -192,28 +191,23 @@ ec2_width = 3*hp;
 module backplane() {
   mounting_hole_pcb_x_offset = ((total_width - outer_width) / 2) - backplane_x_offset + insert_hole_x_offset;
   mounting_hole_pcb_y_offset = ((total_height - outer_height) / 2) - backplane_y_offset + insert_hole_y_offset;
-  large_mounting_hole_radius = 8.2/2;
-  small_mounting_hole_radius = 7.0/2;
+  mounting_hole_radius = 5.30/2;
 
   module mounting_hole(radius) {
     cylinder(pcb_thickness, radius, radius);
   }
+
   module mounting_holes() {
     translate([mounting_hole_pcb_x_offset, mounting_hole_pcb_y_offset, 0]) {
-      translate([0, 1*insert_hole_pitch, 0]) {
-        mounting_hole(large_mounting_hole_radius);
+      translate([0, 0*insert_hole_pitch, 0]) {
+        mounting_hole(mounting_hole_radius);
         translate([insert_hole_x_pitch, 0, 0])
-          mounting_hole(large_mounting_hole_radius);
+          mounting_hole(mounting_hole_radius);
       }
-      translate([0, 4*insert_hole_pitch, 0]) {
-        mounting_hole(small_mounting_hole_radius);
+      translate([0, 7*insert_hole_pitch, 0]) {
+        mounting_hole(mounting_hole_radius);
         translate([insert_hole_x_pitch, 0, 0])
-          mounting_hole(small_mounting_hole_radius);
-      }
-      translate([0, 6*insert_hole_pitch, 0]) {
-        mounting_hole(large_mounting_hole_radius);
-        translate([insert_hole_x_pitch, 0, 0])
-          mounting_hole(large_mounting_hole_radius);
+          mounting_hole(mounting_hole_radius);
       }
     }
   }
@@ -276,57 +270,106 @@ module eurocards() {
 }
 
 module support_rods() {
-  support_rod_length = 210.00;
+  m5_nut_depth = 3.7;
+  m5_nut_od = 8.7;
+  m5_nut_id = 5.0;
+
+  m5_locking_nut_depth = 6.6;
+  m5_locking_nut_od = 10.7;
+  m5_locking_nut_id = 5.0;
+
+  support_rod_length = front_to_rear_panel_outer - backplane_rear_to_back_panel_inner - alu_thickness + m5_nut_depth * 2;
   support_rod_od = 5.00;
   support_rod_protrusion = support_rod_length - front_to_rear_panel_inner;
-  support_rod_z_offset = (total_depth - front_to_rear_panel_inner) / 2 - (support_rod_protrusion/2);
+  support_rod_z_offset = front_panel_z_offset + alu_thickness;
 
-  securing_rod_length = 177.00;
-  securing_rod_z_offset = backplane_z_offset - 10;
-
-  support_sleeve_length = 100.00;
   support_sleeve_od = 8.00;
   support_sleeve_id = 5.00;
-  support_sleeve_z_offset = backplane_z_offset - (support_sleeve_length / 4);
+  support_sleeve_z_offset = front_panel_z_offset + fp_depth;
+  support_sleeve_length = backplane_z_offset - support_sleeve_z_offset;
 
-  module support_rod(offsets) {
-    translate(offsets) {
-      cylinder(support_rod_length, support_rod_od/2, support_rod_od/2);
+  echo("rod length", support_rod_length);
+  echo("sleeve length", support_sleeve_length);
+
+  module support_rod() {
+    cylinder(support_rod_length, support_rod_od/2, support_rod_od/2);
+  }
+
+  module support_sleeve() {
+    difference() {
+      cylinder(support_sleeve_length, support_sleeve_od/2, support_sleeve_od/2);
+      cylinder(support_sleeve_length, support_sleeve_id/2, support_sleeve_id/2);
     }
   }
 
-  module support_sleeve(offsets) {
-    translate(offsets) {
-      difference() {
-        cylinder(support_sleeve_length, support_sleeve_od/2, support_sleeve_od/2);
-        cylinder(support_sleeve_length, support_sleeve_id/2, support_sleeve_id/2);
-      }
+  module m5_nut() {
+    difference() {
+      cylinder(m5_nut_depth, m5_nut_od/2, m5_nut_od/2);
+      cylinder(m5_nut_depth, m5_nut_id/2, m5_nut_id/2);
+      cylinder(support_sleeve_length, support_sleeve_id/2, support_sleeve_id/2);
     }
   }
 
-  module securing_rod(offsets) {
-    translate(offsets) {
-      cylinder(securing_rod_length, support_rod_od/2, support_rod_od/2);
+  module m5_locking_nut() {
+    difference() {
+      cylinder(m5_locking_nut_depth, m5_locking_nut_od/2, m5_locking_nut_od/2);
+      cylinder(m5_locking_nut_depth, m5_locking_nut_id/2, m5_locking_nut_id/2);
+      cylinder(support_sleeve_length, support_sleeve_id/2, support_sleeve_id/2);
     }
   }
 
   translate([insert_hole_x_offset + steel_thickness, steel_thickness + insert_hole_y_offset, 0]) {
+
     translate([0, 0, support_rod_z_offset]) {
-      support_rod([0, insert_hole_pitch, 0]);
-      support_rod([0, 6 * insert_hole_pitch, 0]);
-      support_rod([insert_hole_x_pitch, insert_hole_pitch, 0]);
-      support_rod([insert_hole_x_pitch, 6 * insert_hole_pitch, 0]);
-    }
-    translate([0, 0, support_sleeve_z_offset]) {
-      support_sleeve([0, insert_hole_pitch, 0]);
-      support_sleeve([0, 6 * insert_hole_pitch, 0]);
-      support_sleeve([insert_hole_x_pitch, insert_hole_pitch, 0]);
-      support_sleeve([insert_hole_x_pitch, 6 * insert_hole_pitch, 0]);
+      translate([0, 0, 0]) {
+        support_rod();
+        translate([0, 7*insert_hole_pitch, 0])
+          support_rod();
+      }
+      translate([insert_hole_x_pitch, 0, 0]) {
+        support_rod();
+        translate([0, 7 * insert_hole_pitch, 0])
+          support_rod();
+      }
     }
 
-    translate([0, 0, securing_rod_z_offset]) {
-      securing_rod([0, 4*insert_hole_pitch, 0]);
-      securing_rod([insert_hole_x_pitch, 4*insert_hole_pitch, 0]);
+    translate([0, 0, front_panel_z_offset + fp_depth - alu_thickness - m5_locking_nut_depth]) {
+      translate([0, 0, 0]) {
+        m5_locking_nut();
+        translate([0, 7*insert_hole_pitch, 0])
+          m5_locking_nut();
+      }
+      translate([insert_hole_x_pitch, 0, 0]) {
+        m5_locking_nut();
+        translate([0, 7 * insert_hole_pitch, 0])
+          m5_locking_nut();
+      }
+    }
+
+    translate([0, 0, support_sleeve_z_offset]) {
+      translate([0, 0, 0]) {
+        support_sleeve();
+        translate([0, 7*insert_hole_pitch, 0])
+          support_sleeve();
+      }
+      translate([insert_hole_x_pitch, 0, 0]) {
+        support_sleeve();
+        translate([0, 7 * insert_hole_pitch, 0])
+          support_sleeve();
+      }
+    }
+
+   translate([0, 0, backplane_z_offset + pcb_thickness]) {
+      translate([0, 0, 0]) {
+        m5_nut();
+        translate([0, 7*insert_hole_pitch, 0])
+          m5_nut();
+      }
+      translate([insert_hole_x_pitch, 0, 0]) {
+        m5_nut();
+        translate([0, 7 * insert_hole_pitch, 0])
+          m5_nut();
+      }
     }
   }
 }
@@ -339,7 +382,7 @@ module large_lcd() {
   bezel_height = 32.00;
   bezel_depth = 4.70;
 
-  translate([lcd_x_offset, lcd_y_offset, front_panel_depth + alu_thickness + bezel_depth]) {
+  translate([lcd_x_offset, lcd_y_offset, front_panel_z_offset + alu_thickness + bezel_depth]) {
     difference() {
       color("green")
         cube([lcd_pcb_width, lcd_pcb_height, lcd_pcb_thickness]);
