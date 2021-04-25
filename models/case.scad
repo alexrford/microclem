@@ -188,6 +188,14 @@ hp = 5.08;
 ec1_width = 4*hp;
 ec2_width = 3*hp;
 
+first_card_offset = (backplane_width - (ec1_width + ec2_width)*4) / 2 + 2*hp;
+din_connector_y_offset = backplane_y_offset + (backplane_height - din_female_width)/2;
+
+echo("first_card_offset", first_card_offset);
+
+connector_card_x_offset = first_card_offset - 3*hp;
+echo("connector_card_x_offset", connector_card_x_offset);
+
 module backplane() {
   mounting_hole_pcb_x_offset = ((total_width - outer_width) / 2) - backplane_x_offset + insert_hole_x_offset;
   mounting_hole_pcb_y_offset = ((total_height - outer_height) / 2) - backplane_y_offset + insert_hole_y_offset;
@@ -221,19 +229,21 @@ module backplane() {
     }
 
     for (card_count=[0:3]) {
-      translate([first_card_offset + (ec1_width + ec2_width) * card_count, backplane_y_offset + (backplane_height - din_female_width)/2, pcb_thickness]) {
+      translate([first_card_offset + (ec1_width + ec2_width) * card_count, din_connector_y_offset, pcb_thickness]) {
         din_female();
         translate([ec1_width, 0, 0])
           din_female();
       }
+    }
+
+    translate([connector_card_x_offset - backplane_x_offset, din_connector_y_offset, -din_female_height]) {
+      din_female();
     }
   }
 }
 
 eurocard_depth = 160.00;
 eurocard_height = 100.00;
-
-first_card_offset = (backplane_width - (ec1_width + ec2_width)*4) / 2;
 
 din_connector_allowance = (backplane_rear_to_back_panel_inner - pcb_thickness - eurocard_depth);
 
@@ -333,7 +343,7 @@ module support_rods() {
       }
     }
 
-    translate([0, 0, front_panel_z_offset + fp_depth - alu_thickness - m5_locking_nut_depth]) {
+    translate([0, 0, front_panel_pcb_z_offset - m5_locking_nut_depth]) {
       translate([0, 0, 0]) {
         m5_locking_nut();
         translate([0, 7*insert_hole_pitch, 0])
@@ -343,6 +353,19 @@ module support_rods() {
         m5_locking_nut();
         translate([0, 7 * insert_hole_pitch, 0])
           m5_locking_nut();
+      }
+    }
+
+    translate([0, 0, front_panel_z_offset + fp_depth - alu_thickness - m5_nut_depth]) {
+      translate([0, 0, 0]) {
+        m5_nut();
+        translate([0, 7*insert_hole_pitch, 0])
+          m5_nut();
+      }
+      translate([insert_hole_x_pitch, 0, 0]) {
+        m5_nut();
+        translate([0, 7 * insert_hole_pitch, 0])
+          m5_nut();
       }
     }
 
@@ -374,15 +397,18 @@ module support_rods() {
   }
 }
 
+lcd_bezel_depth = 4.70;
+
+
+
 // part number NHD-0420DZW-AY5
 module large_lcd() {
   rear_clearance = 3.70;
 
   bezel_width = 94.00;
   bezel_height = 32.00;
-  bezel_depth = 4.70;
 
-  translate([lcd_x_offset, lcd_y_offset, front_panel_z_offset + alu_thickness + bezel_depth]) {
+  translate([lcd_x_offset, lcd_y_offset, front_panel_z_offset + alu_thickness + lcd_bezel_depth]) {
     difference() {
       color("green")
         cube([lcd_pcb_width, lcd_pcb_height, lcd_pcb_thickness]);
@@ -404,13 +430,59 @@ module large_lcd() {
        translate([0, 0, lcd_pcb_thickness])
        cube([lcd_pcb_width, lcd_pcb_height, rear_clearance]);
 
-    translate([(lcd_pcb_width - bezel_width) / 2, (lcd_pcb_height - bezel_height) / 2, -bezel_depth])
+    translate([(lcd_pcb_width - bezel_width) / 2, (lcd_pcb_height - bezel_height) / 2, -lcd_bezel_depth])
       difference() {
       color("black")
-        cube([bezel_width, bezel_height, bezel_depth]);
+        cube([bezel_width, bezel_height, lcd_bezel_depth]);
       color("blue")
         translate([(bezel_width - lcd_va_width) / 2, (bezel_height - lcd_va_height) / 2, 0])
         cube([lcd_va_width, lcd_va_height, 1]);
+    }
+  }
+}
+
+front_panel_pcb_z_offset = front_panel_z_offset + alu_thickness + lcd_bezel_depth + pcb_thickness;
+front_panel_pcb_width = 200.00 - 2*alu_thickness;
+front_panel_pcb_x_offset = (total_width - front_panel_pcb_width) / 2;
+
+fp_pcb_to_backplane_inner = backplane_z_offset - front_panel_pcb_z_offset - pcb_thickness;
+
+echo("fp_pcb_to_backplane_inner", fp_pcb_to_backplane_inner);
+
+module front_panel_pcb() {
+  mounting_hole_pcb_x_offset = ((total_width - outer_width) / 2) - backplane_x_offset + insert_hole_x_offset;
+  mounting_hole_pcb_y_offset = ((total_height - outer_height) / 2) - backplane_y_offset + insert_hole_y_offset;
+  mounting_hole_radius = 5.30/2;
+
+  module mounting_hole(radius) {
+    cylinder(pcb_thickness, radius, radius);
+  }
+
+  module mounting_holes() {
+    translate([mounting_hole_pcb_x_offset, mounting_hole_pcb_y_offset, 0]) {
+      translate([0, 0*insert_hole_pitch, 0]) {
+        mounting_hole(mounting_hole_radius);
+        translate([insert_hole_x_pitch, 0, 0])
+          mounting_hole(mounting_hole_radius);
+      }
+      translate([0, 7*insert_hole_pitch, 0]) {
+        mounting_hole(mounting_hole_radius);
+        translate([insert_hole_x_pitch, 0, 0])
+          mounting_hole(mounting_hole_radius);
+      }
+    }
+  }
+
+  translate([front_panel_pcb_x_offset, backplane_y_offset, front_panel_pcb_z_offset]) {
+
+    difference() {
+      color("orange")
+        cube([front_panel_pcb_width, backplane_height, pcb_thickness]);
+      mounting_holes();
+    }
+
+    translate([connector_card_x_offset - front_panel_pcb_x_offset, din_connector_y_offset, pcb_thickness]) {
+      din_female();
     }
   }
 }
@@ -419,6 +491,7 @@ translate([-(total_width/2),-(total_height/2),-(total_depth/2)]) {
   front_and_rear_panels();
   top_and_bottom_panels();
   backplane();
+  front_panel_pcb();
   eurocards();
   support_rods();
   large_lcd();
