@@ -6489,11 +6489,11 @@ $EndComp
 Wire Wire Line
 	8000 4000 7800 4000
 $Comp
-L Device:R R?
+L Device:R R17
 U 1 1 67F57805
 P 8200 4450
-F 0 "R?" H 8130 4404 50  0000 R CNN
-F 1 "100k" H 8130 4495 50  0000 R CNN
+F 0 "R17" H 8130 4404 50  0000 R CNN
+F 1 "100" H 8130 4495 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 8130 4450 50  0001 C CNN
 F 3 "~" H 8200 4450 50  0001 C CNN
 	1    8200 4450
@@ -6518,10 +6518,10 @@ Wire Wire Line
 	8400 4000 8750 4000
 Connection ~ 8200 4300
 $Comp
-L Transistor_FET:FQP27P06 Q?
+L Transistor_FET:FQP27P06 Q3
 U 1 1 6743CEED
 P 8200 4100
-F 0 "Q?" V 8449 4100 50  0000 C CNN
+F 0 "Q3" V 8449 4100 50  0000 C CNN
 F 1 "FQP27P06" V 8540 4100 50  0000 C CNN
 F 2 "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown" H 8400 4025 50  0001 L CIN
 F 3 "https://www.onsemi.com/pub/Collateral/FQP27P06-D.PDF" H 8200 4100 50  0001 L CNN
@@ -6529,11 +6529,11 @@ F 3 "https://www.onsemi.com/pub/Collateral/FQP27P06-D.PDF" H 8200 4100 50  0001 
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:D_Zener D?
+L Device:D_Zener D6
 U 1 1 68F47E00
 P 8400 4150
-F 0 "D?" V 8354 4230 50  0000 L CNN
-F 1 "D_Zener" V 8445 4230 50  0000 L CNN
+F 0 "D6" V 8354 4230 50  0000 L CNN
+F 1 "4.3V" V 8445 4230 50  0000 L CNN
 F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 8400 4150 50  0001 C CNN
 F 3 "~" H 8400 4150 50  0001 C CNN
 	1    8400 4150
@@ -6542,12 +6542,12 @@ $EndComp
 Connection ~ 8400 4000
 Connection ~ 10100 4400
 $Comp
-L Device:Fuse F?
+L Device:Fuse F1
 U 1 1 68F4D08F
 P 10100 4250
-F 0 "F?" H 10160 4296 50  0000 L CNN
+F 0 "F1" H 10160 4296 50  0000 L CNN
 F 1 "Fuse" H 10160 4205 50  0000 L CNN
-F 2 "" V 10030 4250 50  0001 C CNN
+F 2 "Fuse:Fuse_BelFuse_0ZRE0125FF_L21.2mm_W5.3mm" V 10030 4250 50  0001 C CNN
 F 3 "~" H 10100 4250 50  0001 C CNN
 	1    10100 4250
 	1    0    0    -1  
@@ -6556,6 +6556,6 @@ Text Notes 6500 5100 0    50   ~ 0
 Soft power
 Text Notes 7750 3600 0    50   ~ 0
 Reverse voltage protection
-Text Notes 7750 3450 0    50   ~ 0
-TODO: values for zener and resistor
+Text Notes 6050 3700 0    50   ~ 0
+TODO: overvoltage protection
 $EndSCHEMATC
