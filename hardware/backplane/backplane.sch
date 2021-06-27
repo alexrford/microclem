@@ -6467,12 +6467,12 @@ Wire Wire Line
 $Comp
 L power:+VDC #PWR0110
 U 1 1 6776F79E
-P 10100 4100
-F 0 "#PWR0110" H 10100 4000 50  0001 C CNN
-F 1 "+VDC" H 10100 4375 50  0000 C CNN
-F 2 "" H 10100 4100 50  0001 C CNN
-F 3 "" H 10100 4100 50  0001 C CNN
-	1    10100 4100
+P 10100 4400
+F 0 "#PWR0110" H 10100 4300 50  0001 C CNN
+F 1 "+VDC" H 10100 4675 50  0000 C CNN
+F 2 "" H 10100 4400 50  0001 C CNN
+F 3 "" H 10100 4400 50  0001 C CNN
+	1    10100 4400
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -6540,22 +6540,11 @@ F 3 "~" H 8400 4150 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Connection ~ 8400 4000
-Connection ~ 10100 4400
-$Comp
-L Device:Fuse F1
-U 1 1 68F4D08F
-P 10100 4250
-F 0 "F1" H 10160 4296 50  0000 L CNN
-F 1 "Fuse" H 10160 4205 50  0000 L CNN
-F 2 "Fuse:Fuse_BelFuse_0ZRE0125FF_L21.2mm_W5.3mm" V 10030 4250 50  0001 C CNN
-F 3 "~" H 10100 4250 50  0001 C CNN
-	1    10100 4250
-	1    0    0    -1  
-$EndComp
 Text Notes 6500 5100 0    50   ~ 0
 Soft power
 Text Notes 7750 3600 0    50   ~ 0
 Reverse voltage protection
 Text Notes 6050 3700 0    50   ~ 0
 TODO: overvoltage protection
+Connection ~ 10100 4400
 $EndSCHEMATC
