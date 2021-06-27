@@ -5229,7 +5229,7 @@ NoConn ~ 14450 1650
 NoConn ~ 14450 2200
 NoConn ~ 14450 2750
 Text Notes 9750 700  0    50   ~ 0
-TODO: put PHI_2 on the bus\nMaybe put it at A28 and move BASE_CLK to A31 to replace ~RST_HDR~
+TODO: put PHI_2 on the bus\nMaybe put it at A28 and move BASE_CLK to C31 to replace ~RST_HDR~
 $Comp
 L Device:C CBX1
 U 1 1 6209435A
@@ -6547,4 +6547,10 @@ Reverse voltage protection
 Text Notes 6050 3700 0    50   ~ 0
 TODO: overvoltage protection
 Connection ~ 10100 4400
+Text GLabel 10650 2400 0    50   Input ~ 0
+~RST_HDR~
+Text GLabel 10850 2400 2    50   Input ~ 0
+C31
+Wire Wire Line
+	10850 2400 10650 2400
 $EndSCHEMATC
