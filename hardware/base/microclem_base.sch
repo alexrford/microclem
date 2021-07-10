@@ -5808,4 +5808,8 @@ Wire Bus Line
 	21050 450  21050 5100
 Wire Bus Line
 	750  1100 750  2750
+Text Notes -4050 5150 0    50   ~ 0
+TODO: remove functionality that's implemented by the backplane (clock gen. etc.)
+Text Notes 11550 10500 0    50   ~ 0
+TODO: fix spacing for these caps on the PCB
 $EndSCHEMATC
