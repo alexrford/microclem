@@ -14,28 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L power:+5V #5v07
-U 1 1 5FB579DA
-P -2800 2500
-F 0 "#5v07" H -2800 2350 50  0001 C CNN
-F 1 "+5V" H -2712 2537 50  0000 L CNN
-F 2 "" H -2800 2500 50  0001 C CNN
-F 3 "" H -2800 2500 50  0001 C CNN
-	1    -2800 2500
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #gnd08
-U 1 1 5FB5816B
-P -2800 3500
-F 0 "#gnd08" H -2800 3250 50  0001 C CNN
-F 1 "GND" H -2795 3327 50  0000 C CNN
-F 2 "" H -2800 3500 50  0001 C CNN
-F 3 "" H -2800 3500 50  0001 C CNN
-	1    -2800 3500
-	1    0    0    -1  
-$EndComp
-$Comp
 L 74xx:74LS32 U8
 U 5 1 5FB63D2C
 P 1100 14250
@@ -296,17 +274,6 @@ F 3 "" H 8900 -450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small CB27
-U 1 1 5FDB3702
-P 11000 -500
-F 0 "CB27" H 11092 -454 50  0000 L CNN
-F 1 "0.1μF" H 11092 -545 50  0000 L CNN
-F 2 "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm" H 11000 -500 50  0001 C CNN
-F 3 "~" H 11000 -500 50  0001 C CNN
-	1    11000 -500
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+5V #5v054
 U 1 1 5FDB3709
 P 11000 -800
@@ -417,17 +384,6 @@ F 3 "~" H 550 14250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small CB3
-U 1 1 5FEB6931
-P -2500 3050
-F 0 "CB3" H -2408 3096 50  0000 L CNN
-F 1 "0.1μF" H -2408 3005 50  0000 L CNN
-F 2 "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm" H -2500 3050 50  0001 C CNN
-F 3 "~" H -2500 3050 50  0001 C CNN
-	1    -2500 3050
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C_Small CB22
 U 1 1 601890DC
 P 9250 12600
@@ -491,17 +447,6 @@ F 1 "GND" H 7705 14277 50  0000 C CNN
 F 2 "" H 7700 14450 50  0001 C CNN
 F 3 "" H 7700 14450 50  0001 C CNN
 	1    7700 14450
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS14 U3
-U 7 1 5FB55982
-P -2800 3000
-F 0 "U3" H -2850 3050 50  0000 L CNN
-F 1 "74AHC14" H -2950 2950 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H -2800 3000 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74AHC14" H -2800 3000 50  0001 C CNN
-	7    -2800 3000
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1005,17 +950,6 @@ F 3 "" H 250 13150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx:74LS74 U11
-U 2 1 64FCA282
-P 9500 10400
-F 0 "U11" H 9500 10881 50  0000 C CNN
-F 1 "74AHC74" H 9750 10150 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 9500 10400 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/sn74ahc74.pdf" H 9500 10400 50  0001 C CNN
-	2    9500 10400
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C_Small CB18
 U 1 1 659EB932
 P 7600 12700
@@ -1046,17 +980,6 @@ F 1 "GND" H 7605 12627 50  0000 C CNN
 F 2 "" H 7600 12800 50  0001 C CNN
 F 3 "" H 7600 12800 50  0001 C CNN
 	1    7600 12800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small CB5
-U 1 1 65A0E31C
-P -6650 4800
-F 0 "CB5" H -6558 4846 50  0000 L CNN
-F 1 "0.1μF" H -6558 4755 50  0000 L CNN
-F 2 "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm" H -6650 4800 50  0001 C CNN
-F 3 "~" H -6650 4800 50  0001 C CNN
-	1    -6650 4800
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1313,17 +1236,6 @@ F 3 "" H 1100 13350 50  0001 C CNN
 	1    1100 13350
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:C_Small CB7
-U 1 1 682B7AA0
-P -4700 4100
-F 0 "CB7" H -4608 4146 50  0000 L CNN
-F 1 "0.1μF" H -4608 4055 50  0000 L CNN
-F 2 "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm" H -4700 4100 50  0001 C CNN
-F 3 "~" H -4700 4100 50  0001 C CNN
-	1    -4700 4100
-	1    0    0    -1  
-$EndComp
 Text GLabel 9500 10750 3    50   Input ~ 0
 ~RST~
 Text GLabel 9850 10500 2    50   Input ~ 0
@@ -1394,124 +1306,14 @@ $EndComp
 Text Label 9700 8400 0    50   ~ 0
 a15
 $Comp
-L 74xx:74LS74 U10
-U 3 1 61496B18
-P -6950 4800
-F 0 "U10" H -7050 4850 50  0000 L CNN
-F 1 "74AHC74" H -7100 4750 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H -6950 4800 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/sn74ahc74.pdf" H -6950 4800 50  0001 C CNN
-	3    -6950 4800
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #5v020
-U 1 1 61496B1E
-P -6950 4400
-F 0 "#5v020" H -6950 4250 50  0001 C CNN
-F 1 "+5V" H -6862 4437 50  0000 L CNN
-F 2 "" H -6950 4400 50  0001 C CNN
-F 3 "" H -6950 4400 50  0001 C CNN
-	1    -6950 4400
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #gnd021
-U 1 1 61496B24
-P -6950 5200
-F 0 "#gnd021" H -6950 4950 50  0001 C CNN
-F 1 "GND" H -6945 5027 50  0000 C CNN
-F 2 "" H -6950 5200 50  0001 C CNN
-F 3 "" H -6950 5200 50  0001 C CNN
-	1    -6950 5200
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS74 U11
-U 3 1 615242A1
-P 2050 14150
-F 0 "U11" H 1950 14200 50  0000 L CNN
-F 1 "74AHC74" H 1900 14100 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2050 14150 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/sn74ahc74.pdf" H 2050 14150 50  0001 C CNN
-	3    2050 14150
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #5v021
-U 1 1 615242A7
-P 2050 13750
-F 0 "#5v021" H 2050 13600 50  0001 C CNN
-F 1 "+5V" H 2138 13787 50  0000 L CNN
-F 2 "" H 2050 13750 50  0001 C CNN
-F 3 "" H 2050 13750 50  0001 C CNN
-	1    2050 13750
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #gnd022
-U 1 1 615242AD
-P 2050 14550
-F 0 "#gnd022" H 2050 14300 50  0001 C CNN
-F 1 "GND" H 2055 14377 50  0000 C CNN
-F 2 "" H 2050 14550 50  0001 C CNN
-F 3 "" H 2050 14550 50  0001 C CNN
-	1    2050 14550
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C_Small CB11
 U 1 1 6158AFCF
-P 2350 14250
-F 0 "CB11" H 2442 14296 50  0000 L CNN
-F 1 "0.1μF" H 2442 14205 50  0000 L CNN
-F 2 "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm" H 2350 14250 50  0001 C CNN
-F 3 "~" H 2350 14250 50  0001 C CNN
-	1    2350 14250
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS08 U2
-U 5 1 61B184DE
-P -5000 4050
-F 0 "U2" H -5100 4100 50  0000 L CNN
-F 1 "74AHC08" H -5150 4000 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H -5000 4050 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74AHC08" H -5000 4050 50  0001 C CNN
-	5    -5000 4050
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #5v010
-U 1 1 61B1AC6E
-P -5000 3550
-F 0 "#5v010" H -5000 3400 50  0001 C CNN
-F 1 "+5V" H -4912 3587 50  0000 L CNN
-F 2 "" H -5000 3550 50  0001 C CNN
-F 3 "" H -5000 3550 50  0001 C CNN
-	1    -5000 3550
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #gnd011
-U 1 1 61B1B580
-P -5000 4550
-F 0 "#gnd011" H -5000 4300 50  0001 C CNN
-F 1 "GND" H -4995 4377 50  0000 C CNN
-F 2 "" H -5000 4550 50  0001 C CNN
-F 3 "" H -5000 4550 50  0001 C CNN
-	1    -5000 4550
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small CB4
-U 1 1 632B573F
-P -10700 5650
-F 0 "CB4" H -10608 5696 50  0000 L CNN
-F 1 "0.1μF" H -10608 5605 50  0000 L CNN
-F 2 "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm" H -10700 5650 50  0001 C CNN
-F 3 "~" H -10700 5650 50  0001 C CNN
-	1    -10700 5650
+P 11000 -500
+F 0 "CB11" H 11092 -454 50  0000 L CNN
+F 1 "0.1μF" H 11092 -545 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm" H 11000 -500 50  0001 C CNN
+F 3 "~" H 11000 -500 50  0001 C CNN
+	1    11000 -500
 	1    0    0    -1  
 $EndComp
 Text Label 19900 900  0    50   ~ 0
@@ -2215,12 +2017,12 @@ BUS_ACTIVE
 $Comp
 L power:GND #gnd02
 U 1 1 775D2522
-P 17750 4200
-F 0 "#gnd02" H 17750 3950 50  0001 C CNN
-F 1 "GND" H 17755 4027 50  0000 C CNN
-F 2 "" H 17750 4200 50  0001 C CNN
-F 3 "" H 17750 4200 50  0001 C CNN
-	1    17750 4200
+P -6700 5600
+F 0 "#gnd02" H -6700 5350 50  0001 C CNN
+F 1 "GND" H -6695 5427 50  0000 C CNN
+F 2 "" H -6700 5600 50  0001 C CNN
+F 3 "" H -6700 5600 50  0001 C CNN
+	1    -6700 5600
 	0    1    1    0   
 $EndComp
 Wire Wire Line
@@ -3718,16 +3520,6 @@ Wire Wire Line
 	4100 13350 3800 13350
 Connection ~ 3800 13350
 Wire Wire Line
-	-4700 4000 -4700 3550
-Wire Wire Line
-	-4700 3550 -5000 3550
-Connection ~ -5000 3550
-Wire Wire Line
-	-4700 4200 -4700 4550
-Wire Wire Line
-	-4700 4550 -5000 4550
-Connection ~ -5000 4550
-Wire Wire Line
 	3250 12800 3250 12350
 Wire Wire Line
 	3250 12350 2950 12350
@@ -3737,16 +3529,6 @@ Wire Wire Line
 Wire Wire Line
 	3250 13350 3250 13000
 Connection ~ 2950 13350
-Wire Wire Line
-	2350 14150 2350 13750
-Wire Wire Line
-	2350 13750 2050 13750
-Connection ~ 2050 13750
-Wire Wire Line
-	2050 14550 2350 14550
-Wire Wire Line
-	2350 14550 2350 14350
-Connection ~ 2050 14550
 $Comp
 L Device:C_Small CB10
 U 1 1 6158AFBC
@@ -3758,16 +3540,6 @@ F 3 "~" H 550 12750 50  0001 C CNN
 	1    550  12750
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	-6650 4700 -6650 4400
-Wire Wire Line
-	-6650 4400 -6950 4400
-Connection ~ -6950 4400
-Wire Wire Line
-	-6950 5200 -6650 5200
-Wire Wire Line
-	-6650 5200 -6650 4900
-Connection ~ -6950 5200
 Wire Wire Line
 	1400 12750 1400 12350
 Wire Wire Line
@@ -3818,16 +3590,6 @@ Wire Wire Line
 Wire Wire Line
 	1400 14750 1100 14750
 Connection ~ 1100 14750
-Wire Wire Line
-	-2500 2950 -2500 2500
-Wire Wire Line
-	-2500 2500 -2800 2500
-Connection ~ -2800 2500
-Wire Wire Line
-	-2800 3500 -2500 3500
-Wire Wire Line
-	-2500 3500 -2500 3150
-Connection ~ -2800 3500
 $Comp
 L Device:R R9
 U 1 1 604B12C4
@@ -4076,7 +3838,7 @@ Wire Wire Line
 Connection ~ 8200 6200
 Wire Wire Line
 	8200 6200 8200 6300
-NoConn ~ 18350 4200
+NoConn ~ -6100 5600
 Wire Wire Line
 	11450 5300 11450 5200
 Wire Wire Line
@@ -4090,12 +3852,12 @@ Wire Wire Line
 $Comp
 L 74xx:74LS14 U12
 U 4 1 65EDF68A
-P 18050 4200
-F 0 "U12" H 18100 4050 50  0000 C CNN
-F 1 "74AHC14" H 18100 3950 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 18050 4200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74AHC14" H 18050 4200 50  0001 C CNN
-	4    18050 4200
+P -6400 5600
+F 0 "U12" H -6350 5450 50  0000 C CNN
+F 1 "74AHC14" H -6350 5350 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H -6400 5600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74AHC14" H -6400 5600 50  0001 C CNN
+	4    -6400 5600
 	1    0    0    -1  
 $EndComp
 Text GLabel 1400 5800 3    50   Input ~ 0
@@ -4649,194 +4411,38 @@ Text GLabel 21900 7200 0    50   Input ~ 0
 ~RST~
 Wire Wire Line
 	21900 7200 21950 7200
-$Comp
-L 74xx:74LS08 U4
-U 2 1 605498BE
-P 18800 6000
-F 0 "U4" H 18800 6325 50  0000 C CNN
-F 1 "74AHC08" H 18800 6234 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 18800 6000 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74AHC08" H 18800 6000 50  0001 C CNN
-	2    18800 6000
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS08 U4
-U 3 1 6054FD2F
-P 18750 6900
-F 0 "U4" H 18750 7225 50  0000 C CNN
-F 1 "74AHC08" H 18750 7134 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 18750 6900 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74AHC08" H 18750 6900 50  0001 C CNN
-	3    18750 6900
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS08 U4
-U 4 1 60551B10
-P 18750 7950
-F 0 "U4" H 18750 8275 50  0000 C CNN
-F 1 "74AHC08" H 18750 8184 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 18750 7950 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74AHC08" H 18750 7950 50  0001 C CNN
-	4    18750 7950
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS08 U4
-U 5 1 60555A56
-P 5100 12900
-F 0 "U4" H 5050 12950 50  0000 L CNN
-F 1 "74AHC08" H 4950 12850 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 5100 12900 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74AHC08" H 5100 12900 50  0001 C CNN
-	5    5100 12900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small CB2
-U 1 1 6055AACC
-P 5400 12900
-F 0 "CB2" H 5492 12946 50  0000 L CNN
-F 1 "0.1μF" H 5492 12855 50  0000 L CNN
-F 2 "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm" H 5400 12900 50  0001 C CNN
-F 3 "~" H 5400 12900 50  0001 C CNN
-	1    5400 12900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5100 12400 5400 12400
-Wire Wire Line
-	5400 12400 5400 12800
-Wire Wire Line
-	5100 13400 5400 13400
-Wire Wire Line
-	5400 13400 5400 13000
-$Comp
-L power:+5V #5v01
-U 1 1 607E8D4F
-P 5100 12400
-F 0 "#5v01" H 5100 12250 50  0001 C CNN
-F 1 "+5V" H 5188 12437 50  0000 L CNN
-F 2 "" H 5100 12400 50  0001 C CNN
-F 3 "" H 5100 12400 50  0001 C CNN
-	1    5100 12400
-	1    0    0    -1  
-$EndComp
-Connection ~ 5100 12400
-$Comp
-L power:GND #gnd01
-U 1 1 607E9261
-P 5100 13400
-F 0 "#gnd01" H 5100 13150 50  0001 C CNN
-F 1 "GND" H 5105 13227 50  0000 C CNN
-F 2 "" H 5100 13400 50  0001 C CNN
-F 3 "" H 5100 13400 50  0001 C CNN
-	1    5100 13400
-	1    0    0    -1  
-$EndComp
-Connection ~ 5100 13400
-NoConn ~ 19050 7950
-NoConn ~ 19050 6900
-NoConn ~ 19100 6000
-NoConn ~ 18850 1900
+NoConn ~ -5600 3300
 $Comp
 L 74xx:74LS08 U7
 U 1 1 6804C914
-P 18550 1900
-F 0 "U7" H 18500 2000 50  0000 C CNN
-F 1 "74AHC08" H 18550 1900 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 18550 1900 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74AHC08" H 18550 1900 50  0001 C CNN
-	1    18550 1900
+P -5900 3300
+F 0 "U7" H -5950 3400 50  0000 C CNN
+F 1 "74AHC08" H -5900 3300 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H -5900 3300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74AHC08" H -5900 3300 50  0001 C CNN
+	1    -5900 3300
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #gnd0102
 U 1 1 613A4014
-P 18250 1800
-F 0 "#gnd0102" H 18250 1550 50  0001 C CNN
-F 1 "GND" H 18255 1627 50  0000 C CNN
-F 2 "" H 18250 1800 50  0001 C CNN
-F 3 "" H 18250 1800 50  0001 C CNN
-	1    18250 1800
+P -6200 3200
+F 0 "#gnd0102" H -6200 2950 50  0001 C CNN
+F 1 "GND" H -6195 3027 50  0000 C CNN
+F 2 "" H -6200 3200 50  0001 C CNN
+F 3 "" H -6200 3200 50  0001 C CNN
+	1    -6200 3200
 	0    1    1    0   
 $EndComp
 $Comp
 L power:GND #gnd0103
 U 1 1 613A440F
-P 18250 2000
-F 0 "#gnd0103" H 18250 1750 50  0001 C CNN
-F 1 "GND" H 18255 1827 50  0000 C CNN
-F 2 "" H 18250 2000 50  0001 C CNN
-F 3 "" H 18250 2000 50  0001 C CNN
-	1    18250 2000
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #gnd0104
-U 1 1 613A4EB4
-P 18500 5900
-F 0 "#gnd0104" H 18500 5650 50  0001 C CNN
-F 1 "GND" H 18505 5727 50  0000 C CNN
-F 2 "" H 18500 5900 50  0001 C CNN
-F 3 "" H 18500 5900 50  0001 C CNN
-	1    18500 5900
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #gnd0105
-U 1 1 613A4EBA
-P 18500 6100
-F 0 "#gnd0105" H 18500 5850 50  0001 C CNN
-F 1 "GND" H 18505 5927 50  0000 C CNN
-F 2 "" H 18500 6100 50  0001 C CNN
-F 3 "" H 18500 6100 50  0001 C CNN
-	1    18500 6100
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #gnd0106
-U 1 1 61426D7D
-P 18450 6800
-F 0 "#gnd0106" H 18450 6550 50  0001 C CNN
-F 1 "GND" H 18455 6627 50  0000 C CNN
-F 2 "" H 18450 6800 50  0001 C CNN
-F 3 "" H 18450 6800 50  0001 C CNN
-	1    18450 6800
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #gnd0107
-U 1 1 61426D83
-P 18450 7000
-F 0 "#gnd0107" H 18450 6750 50  0001 C CNN
-F 1 "GND" H 18455 6827 50  0000 C CNN
-F 2 "" H 18450 7000 50  0001 C CNN
-F 3 "" H 18450 7000 50  0001 C CNN
-	1    18450 7000
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #gnd0108
-U 1 1 614A8CF4
-P 18450 7850
-F 0 "#gnd0108" H 18450 7600 50  0001 C CNN
-F 1 "GND" H 18455 7677 50  0000 C CNN
-F 2 "" H 18450 7850 50  0001 C CNN
-F 3 "" H 18450 7850 50  0001 C CNN
-	1    18450 7850
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #gnd0109
-U 1 1 614A8CFA
-P 18450 8050
-F 0 "#gnd0109" H 18450 7800 50  0001 C CNN
-F 1 "GND" H 18455 7877 50  0000 C CNN
-F 2 "" H 18450 8050 50  0001 C CNN
-F 3 "" H 18450 8050 50  0001 C CNN
-	1    18450 8050
+P -6200 3400
+F 0 "#gnd0103" H -6200 3150 50  0001 C CNN
+F 1 "GND" H -6195 3227 50  0000 C CNN
+F 2 "" H -6200 3400 50  0001 C CNN
+F 3 "" H -6200 3400 50  0001 C CNN
+	1    -6200 3400
 	0    1    1    0   
 $EndComp
 Connection ~ 21950 400 
@@ -5048,61 +4654,6 @@ F 3 "http://www.ti.com/lit/gpn/sn74AHCT125" H 2650 8050 50  0001 C CNN
 	1    2650 8050
 	1    0    0    -1  
 $EndComp
-$Comp
-L Jumper:Jumper_2_Open JPC2
-U 1 1 5F9E05D7
-P -8700 5600
-F 0 "JPC2" H -8650 5550 50  0000 L CNN
-F 1 "/1" H -8800 5550 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H -8700 5600 50  0001 C CNN
-F 3 "~" H -8700 5600 50  0001 C CNN
-	1    -8700 5600
-	-1   0    0    1   
-$EndComp
-$Comp
-L Jumper:Jumper_2_Open JPC5
-U 1 1 5F9DF651
-P -8700 6250
-F 0 "JPC5" H -8650 6200 50  0000 L CNN
-F 1 "/8" H -8800 6200 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H -8700 6250 50  0001 C CNN
-F 3 "~" H -8700 6250 50  0001 C CNN
-	1    -8700 6250
-	-1   0    0    1   
-$EndComp
-$Comp
-L Jumper:Jumper_2_Open JPC4
-U 1 1 5F9E1581
-P -8700 6050
-F 0 "JPC4" H -8650 6000 50  0000 L CNN
-F 1 "/4" H -8800 6000 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H -8700 6050 50  0001 C CNN
-F 3 "~" H -8700 6050 50  0001 C CNN
-	1    -8700 6050
-	-1   0    0    1   
-$EndComp
-$Comp
-L Jumper:Jumper_2_Open JPC6
-U 1 1 6A002EB8
-P -8700 6450
-F 0 "JPC6" H -8650 6400 50  0000 L CNN
-F 1 "/16" H -8850 6400 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H -8700 6450 50  0001 C CNN
-F 3 "~" H -8700 6450 50  0001 C CNN
-	1    -8700 6450
-	-1   0    0    1   
-$EndComp
-$Comp
-L Jumper:Jumper_2_Open JPC3
-U 1 1 5F9E7183
-P -8700 5800
-F 0 "JPC3" H -8650 5750 50  0000 L CNN
-F 1 "/2" H -8800 5750 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H -8700 5800 50  0001 C CNN
-F 3 "~" H -8700 5800 50  0001 C CNN
-	1    -8700 5800
-	-1   0    0    1   
-$EndComp
 Text Notes 1200 7850 0    50   ~ 10
 Clock divider for copy clock
 Wire Wire Line
@@ -5110,290 +4661,29 @@ Wire Wire Line
 Text GLabel 1050 8700 0    50   Input ~ 0
 PHI_2
 $Comp
-L 74xx:74LS08 U4
-U 1 1 60546A44
-P -2900 10300
-F 0 "U4" H -2900 10625 50  0000 C CNN
-F 1 "74AHC08" H -2900 10534 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H -2900 10300 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74AHC08" H -2900 10300 50  0001 C CNN
-	1    -2900 10300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Oscillator:CXO_DIP8 X1
-U 1 1 5FA6BDDD
-P -9850 5600
-F 0 "X1" H -10193 5646 50  0000 R CNN
-F 1 "CXO_DIP8" V -10193 5555 50  0000 R CNN
-F 2 "Oscillator:Oscillator_DIP-8" H -9400 5250 50  0001 C CNN
-F 3 "http://cdn-reichelt.de/documents/datenblatt/B400/OSZI.pdf" H -9950 5600 50  0001 C CNN
-	1    -9850 5600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R6
-U 1 1 608A1617
-P -1450 4200
-F 0 "R6" V -1550 4150 50  0000 L CNN
-F 1 "4.7k" V -1450 4100 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V -1520 4200 50  0001 C CNN
-F 3 "~" H -1450 4200 50  0001 C CNN
-	1    -1450 4200
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS14 U3
-U 6 1 65EE41C1
-P -2700 7250
-F 0 "U3" H -2700 7450 50  0000 C CNN
-F 1 "74AHC14" H -2700 7050 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H -2700 7250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74AHC14" H -2700 7250 50  0001 C CNN
-	6    -2700 7250
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS14 U3
-U 3 1 64C1E3B8
-P -2650 5450
-F 0 "U3" H -2650 5767 50  0000 C CNN
-F 1 "74AHC14" H -2650 5676 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H -2650 5450 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74AHC14" H -2650 5450 50  0001 C CNN
-	3    -2650 5450
-	1    0    0    -1  
-$EndComp
-$Comp
-L Jumper:Jumper_2_Open JPC1
-U 1 1 63C767A0
-P -1550 6500
-F 0 "JPC1" H -1600 6450 50  0000 L CNN
-F 1 "JP_RST" H -1650 6350 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H -1550 6500 50  0001 C CNN
-F 3 "~" H -1550 6500 50  0001 C CNN
-	1    -1550 6500
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R2
-U 1 1 6490E403
-P -650 5850
-F 0 "R2" H -580 5896 50  0000 L CNN
-F 1 "100k" H -580 5805 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V -720 5850 50  0001 C CNN
-F 3 "~" H -650 5850 50  0001 C CNN
-	1    -650 5850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small CR2
-U 1 1 64D847F7
-P -1650 7150
-F 0 "CR2" H -1558 7196 50  0000 L CNN
-F 1 "1μF" H -1558 7105 50  0000 L CNN
-F 2 "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm" H -1650 7150 50  0001 C CNN
-F 3 "~" H -1650 7150 50  0001 C CNN
-	1    -1650 7150
-	1    0    0    -1  
-$EndComp
-$Comp
-L pspice:DIODE D2
-U 1 1 647DF8B0
-P -1700 5650
-F 0 "D2" H -1700 5915 50  0000 C CNN
-F 1 "DIODE" H -1700 5824 50  0000 C CNN
-F 2 "Diode_THT:D_DO-15_P2.54mm_Vertical_AnodeUp" H -1700 5650 50  0001 C CNN
-F 3 "~" H -1700 5650 50  0001 C CNN
-	1    -1700 5650
-	-1   0    0    1   
-$EndComp
-$Comp
-L 74xx:74LS14 U3
-U 4 1 5FB510D6
-P -2750 6050
-F 0 "U3" H -2750 6367 50  0000 C CNN
-F 1 "74AHC14" H -2750 6276 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H -2750 6050 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74AHC14" H -2750 6050 50  0001 C CNN
-	4    -2750 6050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small CR1
-U 1 1 64D84C2A
-P -1350 3350
-F 0 "CR1" H -1258 3396 50  0000 L CNN
-F 1 "1μF" H -1258 3305 50  0000 L CNN
-F 2 "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm" H -1350 3350 50  0001 C CNN
-F 3 "~" H -1350 3350 50  0001 C CNN
-	1    -1350 3350
-	1    0    0    -1  
-$EndComp
-$Comp
-L pspice:DIODE D1
-U 1 1 647DCB58
-P -1650 5050
-F 0 "D1" H -1650 5315 50  0000 C CNN
-F 1 "DIODE" H -1650 5224 50  0000 C CNN
-F 2 "Diode_THT:D_DO-15_P2.54mm_Vertical_AnodeUp" H -1650 5050 50  0001 C CNN
-F 3 "~" H -1650 5050 50  0001 C CNN
-	1    -1650 5050
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R R1
-U 1 1 61FDE295
-P -1650 2800
-F 0 "R1" H -1580 2846 50  0000 L CNN
-F 1 "1M" H -1580 2755 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V -1720 2800 50  0001 C CNN
-F 3 "~" H -1650 2800 50  0001 C CNN
-	1    -1650 2800
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS14 U3
-U 5 1 5FB52D1C
-P -2800 6650
-F 0 "U3" H -2800 6967 50  0000 C CNN
-F 1 "74AHC14" H -2800 6876 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H -2800 6650 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74AHC14" H -2800 6650 50  0001 C CNN
-	5    -2800 6650
-	1    0    0    -1  
-$EndComp
-$Comp
 L 74xx:74LS32 U8
 U 3 1 5FB5F852
-P -4200 10250
-F 0 "U8" H -4200 10575 50  0000 C CNN
-F 1 "74AHC32" H -4200 10484 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H -4200 10250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74AHC32" H -4200 10250 50  0001 C CNN
-	3    -4200 10250
+P -6600 8600
+F 0 "U8" H -6600 8925 50  0000 C CNN
+F 1 "74AHC32" H -6600 8834 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H -6600 8600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74AHC32" H -6600 8600 50  0001 C CNN
+	3    -6600 8600
 	1    0    0    -1  
 $EndComp
 $Comp
 L 74xx:74LS74 U5
 U 2 1 61466C4F
-P -8150 11200
-F 0 "U5" H -8150 11681 50  0000 C CNN
-F 1 "74AHC74" H -8150 11590 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H -8150 11200 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/sn74ahc74.pdf" H -8150 11200 50  0001 C CNN
-	2    -8150 11200
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS08 U2
-U 3 1 61B1258C
-P -4900 6600
-F 0 "U2" H -4900 6925 50  0000 C CNN
-F 1 "74AHC08" H -4900 6834 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H -4900 6600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74AHC08" H -4900 6600 50  0001 C CNN
-	3    -4900 6600
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS74 U10
-U 1 1 61437C3A
-P -6900 6100
-F 0 "U10" H -6900 6581 50  0000 C CNN
-F 1 "74AHC74" H -6900 6490 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H -6900 6100 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/sn74ahc74.pdf" H -6900 6100 50  0001 C CNN
-	1    -6900 6100
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS74 U11
-U 1 1 61524295
-P -5950 11300
-F 0 "U11" H -5950 11781 50  0000 C CNN
-F 1 "74AHC74" H -5950 11690 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H -5950 11300 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/sn74ahc74.pdf" H -5950 11300 50  0001 C CNN
-	1    -5950 11300
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS74 U10
-U 2 1 6152429B
-P -6900 7000
-F 0 "U10" H -6900 7481 50  0000 C CNN
-F 1 "74AHC74" H -6900 7390 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H -6900 7000 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/sn74ahc74.pdf" H -6900 7000 50  0001 C CNN
-	2    -6900 7000
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS14 U3
-U 2 1 5FB4B0E1
-P -2700 4950
-F 0 "U3" H -2700 5267 50  0000 C CNN
-F 1 "74AHC14" H -2700 5176 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H -2700 4950 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74AHC14" H -2700 4950 50  0001 C CNN
-	2    -2700 4950
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS14 U3
-U 1 1 5FB4A682
-P -2800 4250
-F 0 "U3" H -2800 4567 50  0000 C CNN
-F 1 "74AHC14" H -2800 4476 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H -2800 4250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74AHC14" H -2800 4250 50  0001 C CNN
-	1    -2800 4250
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS08 U2
-U 4 1 68054532
-P -4950 7250
-F 0 "U2" H -4950 7575 50  0000 C CNN
-F 1 "74AHC08" H -4950 7484 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H -4950 7250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74AHC08" H -4950 7250 50  0001 C CNN
-	4    -4950 7250
+P 9500 10400
+F 0 "U5" H 9500 10881 50  0000 C CNN
+F 1 "74AHC74" H 9500 10790 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 9500 10400 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/sn74ahc74.pdf" H 9500 10400 50  0001 C CNN
+	2    9500 10400
 	1    0    0    -1  
 $EndComp
 Text GLabel 21900 8500 0    50   Input ~ 0
 PHI_2
-$Comp
-L 74xx:74LS08 U2
-U 2 1 61B10E2C
-P -4900 6050
-F 0 "U2" H -4900 6375 50  0000 C CNN
-F 1 "74AHC08" H -4900 6284 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H -4900 6050 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74AHC08" H -4900 6050 50  0001 C CNN
-	2    -4900 6050
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS08 U2
-U 1 1 61B0B1BD
-P -4850 5400
-F 0 "U2" H -4850 5725 50  0000 C CNN
-F 1 "74AHC08" H -4850 5634 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H -4850 5400 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74AHC08" H -4850 5400 50  0001 C CNN
-	1    -4850 5400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	-10700 5550 -10700 5300
-Wire Wire Line
-	-10700 5300 -9850 5300
-Wire Wire Line
-	-9850 5900 -10700 5900
-Wire Wire Line
-	-10700 5900 -10700 5750
 Wire Wire Line
 	1150 8050 2350 8050
 NoConn ~ 2100 8400
@@ -5418,6 +4708,62 @@ Text Notes 5700 -2050 0    50   ~ 0
 BASE_CLK - clock signal generated by some reference on the backplane (e.g. XO or 555)\nBUS_CLK - clock signal driven by some bus device\nPHI_2 - effective system clock signal, either BASE_CLK or BUS_CLK depending on if ~BUS_ACTIVE~ is high or low\nBOARD_CLK - the effective clock rate used by this board. This is PHI_2 unless ~CPY~ is low, in which case we use a /16 divided PHI_2
 Text GLabel 1050 8900 0    50   Input ~ 0
 ~RST~
+$Comp
+L Graphic:Logo_Open_Hardware_Small LOGO3
+U 1 1 643FD408
+P -2250 7800
+F 0 "LOGO3" H -2003 7871 50  0000 L CNN
+F 1 "Logo_Open_Hardware_Small" H -2003 7780 50  0000 L CNN
+F 2 "Symbol:OSHW-Logo2_9.8x8mm_SilkScreen" H -2250 7800 50  0001 C CNN
+F 3 "~" H -2250 7800 50  0001 C CNN
+	1    -2250 7800
+	1    0    0    -1  
+$EndComp
+NoConn ~ -6300 8600
+$Comp
+L power:GND #gnd0104
+U 1 1 64ABAEE7
+P -6900 8500
+F 0 "#gnd0104" H -6900 8250 50  0001 C CNN
+F 1 "GND" H -6895 8327 50  0000 C CNN
+F 2 "" H -6900 8500 50  0001 C CNN
+F 3 "" H -6900 8500 50  0001 C CNN
+	1    -6900 8500
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #gnd0105
+U 1 1 64ABB719
+P -6900 8700
+F 0 "#gnd0105" H -6900 8450 50  0001 C CNN
+F 1 "GND" H -6895 8527 50  0000 C CNN
+F 2 "" H -6900 8700 50  0001 C CNN
+F 3 "" H -6900 8700 50  0001 C CNN
+	1    -6900 8700
+	0    1    1    0   
+$EndComp
+$Comp
+L Graphic:Logo_Open_Hardware_Small LOGO1
+U 1 1 64AD596B
+P -2750 7000
+F 0 "LOGO1" H -2503 7071 50  0000 L CNN
+F 1 "Logo_Microclem" H -2503 6980 50  0000 L CNN
+F 2 "graphics:microclem_logo_mask" H -2750 7000 50  0001 C CNN
+F 3 "~" H -2750 7000 50  0001 C CNN
+	1    -2750 7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Graphic:Logo_Open_Hardware_Small LOGO2
+U 1 1 64AD5B9D
+P -2800 8800
+F 0 "LOGO2" H -2553 8871 50  0000 L CNN
+F 1 "Logo_QR_Code" H -2553 8780 50  0000 L CNN
+F 2 "graphics:qr_code" H -2800 8800 50  0001 C CNN
+F 3 "~" H -2800 8800 50  0001 C CNN
+	1    -2800 8800
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
 	21150 7600 21950 7600
 Wire Bus Line
