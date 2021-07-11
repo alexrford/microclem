@@ -1815,40 +1815,6 @@ F 3 "" H 9950 13550 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	9950 13150 9950 13350
-Text GLabel 1900 5500 3    50   Input ~ 0
-~MP_RST~
-$Comp
-L power:+5V #5v018
-U 1 1 63286462
-P 1900 4850
-F 0 "#5v018" H 1900 4700 50  0001 C CNN
-F 1 "+5V" H 1900 4850 50  0000 L CNN
-F 2 "" H 1900 4850 50  0001 C CNN
-F 3 "" H 1900 4850 50  0001 C CNN
-	1    1900 4850
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1900 5500 1900 5450
-$Comp
-L 74xx:74LS74 U5
-U 1 1 64FCA27C
-P 1900 5150
-F 0 "U5" H 1900 5631 50  0000 C CNN
-F 1 "74AHC74" H 1900 5540 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 1900 5150 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/sn74ahc74.pdf" H 1900 5150 50  0001 C CNN
-	1    1900 5150
-	1    0    0    -1  
-$EndComp
-Entry Wire Line
-	1300 5050 1200 4950
-Text GLabel 1200 4850 1    50   Input ~ 0
-DATA_MEM
-Text Label 1300 5050 0    50   ~ 0
-d7
-Wire Bus Line
-	1200 4850 1200 4950
 $Comp
 L power:GND #gnd052
 U 1 1 66E714AE
@@ -1951,8 +1917,6 @@ Wire Wire Line
 	9950 12300 9950 12500
 Wire Wire Line
 	7700 8900 7700 8850
-Text Notes 1500 4550 0    50   ~ 10
-Hi-mem/bus switch
 Text Notes 10150 10250 1    50   ~ 0
 latch w/ reset s.t. we can\nstart copying again when\n~RST~ goes low
 $Comp
@@ -2010,10 +1974,6 @@ F 3 "http://www.ti.com/lit/gpn/sn74AHC08" H 4700 8300 50  0001 C CNN
 	2    4700 8300
 	0    -1   -1   0   
 $EndComp
-Text GLabel 2250 5250 2    50   Input ~ 0
-~BUS_ACTIVE~
-Text GLabel 2250 5050 2    50   Input ~ 0
-BUS_ACTIVE
 Wire Wire Line
 	5300 8150 5300 7900
 Wire Wire Line
@@ -2130,12 +2090,8 @@ Wire Wire Line
 	5150 9800 5450 9800
 Wire Wire Line
 	5450 10200 5450 10400
-Wire Wire Line
-	2200 5050 2250 5050
 Text GLabel 12250 6500 0    50   Input ~ 0
 BUS_ACTIVE
-Wire Wire Line
-	2200 5250 2250 5250
 Text Notes 6750 9100 1    50   ~ 0
 We can stop the counter by\nsetting ~BUS_ACTIVE~ low
 Wire Wire Line
@@ -2202,8 +2158,6 @@ Text GLabel 13350 7650 3    50   Input ~ 0
 ~BUS_STATUS_R~
 Wire Wire Line
 	13350 7650 13350 7500
-Text Notes 1000 6000 1    50   ~ 0
-records if we're currently addressing the\nbus or HI_MEM with 8000-afff
 Text GLabel 9500 2150 2    50   Input ~ 0
 ~S_RAM_LO~
 Text GLabel 11650 2150 2    50   Input ~ 0
@@ -2279,7 +2233,7 @@ U 1 1 8D9455EC
 P 13100 9400
 F 0 "R4" V 13200 9300 50  0000 L CNN
 F 1 "10k" V 13100 9300 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 13030 9400 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 13030 9400 50  0001 C CNN
 F 3 "~" H 13100 9400 50  0001 C CNN
 	1    13100 9400
 	0    1    1    0   
@@ -2307,8 +2261,8 @@ Wire Wire Line
 Wire Wire Line
 	9800 5150 9500 5150
 Wire Wire Line
-	8200 3300 8150 3300
-Text GLabel 8200 3300 2    50   Input ~ 0
+	8200 3250 8150 3250
+Text GLabel 8200 3250 2    50   Input ~ 0
 ~R~W
 Text Label 9700 4550 0    50   ~ 0
 a9
@@ -2379,16 +2333,16 @@ c400-ffff
 $Comp
 L 74xx:74LS14 U12
 U 5 1 65EE18D8
-P 7850 3300
-F 0 "U12" H 8000 3200 50  0000 C CNN
-F 1 "74AHC14" H 7850 3100 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 7850 3300 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74AHC14" H 7850 3300 50  0001 C CNN
-	5    7850 3300
+P 7850 3250
+F 0 "U12" H 8000 3150 50  0000 C CNN
+F 1 "74AHC14" H 7850 3050 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 7850 3250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74AHC14" H 7850 3250 50  0001 C CNN
+	5    7850 3250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7500 3300 7550 3300
+	7500 3250 7550 3250
 Wire Wire Line
 	8350 4450 8350 4650
 Wire Wire Line
@@ -2602,7 +2556,7 @@ U 1 1 8D9455F2
 P 13250 9500
 F 0 "CR4" H 13050 9400 50  0000 L CNN
 F 1 "22pF" V 13350 9400 50  0000 L CNN
-F 2 "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm" H 13250 9500 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L10.3mm_W4.5mm_P7.50mm_MKS4" H 13250 9500 50  0001 C CNN
 F 3 "~" H 13250 9500 50  0001 C CNN
 	1    13250 9500
 	1    0    0    -1  
@@ -2631,7 +2585,7 @@ U 1 1 60305B0B
 P 12350 9300
 F 0 "CR3" H 12150 9200 50  0000 L CNN
 F 1 "22pF" V 12450 9200 50  0000 L CNN
-F 2 "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm" H 12350 9300 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L10.3mm_W4.5mm_P7.50mm_MKS4" H 12350 9300 50  0001 C CNN
 F 3 "~" H 12350 9300 50  0001 C CNN
 	1    12350 9300
 	1    0    0    -1  
@@ -2846,7 +2800,7 @@ U 1 1 60305E9C
 P 12200 9200
 F 0 "R3" V 12300 9100 50  0000 L CNN
 F 1 "330" V 12200 9100 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 12130 9200 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 12130 9200 50  0001 C CNN
 F 3 "~" H 12200 9200 50  0001 C CNN
 	1    12200 9200
 	0    1    1    0   
@@ -2951,7 +2905,7 @@ F 3 "http://www.ti.com/lit/gpn/sn74AHCT125" H 9400 8400 50  0001 C CNN
 $EndComp
 Text GLabel 2250 2350 2    50   Input ~ 0
 R~W~
-Text GLabel 7500 3300 0    50   Input ~ 0
+Text GLabel 7500 3250 0    50   Input ~ 0
 R~W~
 Entry Wire Line
 	5300 2250 5400 2350
@@ -3583,7 +3537,7 @@ U 1 1 604B12C4
 P 2850 2700
 F 0 "R9" V 2750 2650 50  0000 L CNN
 F 1 "4.7k" V 2850 2600 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 2780 2700 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 2780 2700 50  0001 C CNN
 F 3 "~" H 2850 2700 50  0001 C CNN
 	1    2850 2700
 	1    0    0    -1  
@@ -3605,7 +3559,7 @@ U 1 1 6072740A
 P 2850 1850
 F 0 "R8" V 2750 1800 50  0000 L CNN
 F 1 "4.7k" V 2850 1750 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 2780 1850 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 2780 1850 50  0001 C CNN
 F 3 "~" H 2850 1850 50  0001 C CNN
 	1    2850 1850
 	1    0    0    -1  
@@ -3627,7 +3581,7 @@ U 1 1 607A555B
 P 2850 1100
 F 0 "R7" V 2750 1050 50  0000 L CNN
 F 1 "4.7k" V 2850 1000 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 2780 1100 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 2780 1100 50  0001 C CNN
 F 3 "~" H 2850 1100 50  0001 C CNN
 	1    2850 1100
 	1    0    0    -1  
@@ -3649,7 +3603,7 @@ U 1 1 60A99809
 P 11650 6450
 F 0 "R11" V 11550 6400 50  0000 L CNN
 F 1 "4.7k" V 11650 6350 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 11580 6450 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 11580 6450 50  0001 C CNN
 F 3 "~" H 11650 6450 50  0001 C CNN
 	1    11650 6450
 	1    0    0    -1  
@@ -3671,7 +3625,7 @@ U 1 1 60C13C74
 P 9150 10050
 F 0 "R10" V 9250 10000 50  0000 L CNN
 F 1 "4.7k" V 9150 9950 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 9080 10050 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 9080 10050 50  0001 C CNN
 F 3 "~" H 9150 10050 50  0001 C CNN
 	1    9150 10050
 	1    0    0    -1  
@@ -3739,10 +3693,6 @@ F 3 "https://www.ti.com/lit/ds/symlink/sn74ahc02" H 7900 6200 50  0001 C CNN
 	1    7900 6200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1600 5150 1500 5150
-Wire Wire Line
-	1300 5050 1600 5050
 Text Notes 6100 11050 0    50   ~ 0
 TODO: double check timings\nfor writing to this wrt\nBCC and ~BUS_STATUS_W~
 $Comp
@@ -3802,8 +3752,6 @@ Wire Wire Line
 Wire Wire Line
 	10600 4350 10600 4650
 Wire Wire Line
-	1400 5800 1400 5750
-Wire Wire Line
 	8200 6100 8200 6200
 Connection ~ 8200 6200
 Wire Wire Line
@@ -3829,12 +3777,6 @@ F 3 "http://www.ti.com/lit/gpn/sn74AHC14" H 4700 4950 50  0001 C CNN
 	4    4700 4950
 	1    0    0    -1  
 $EndComp
-Text GLabel 1400 5800 3    50   Input ~ 0
-~BUS_STATUS_W~
-Text GLabel 1600 5800 3    50   Input ~ 0
-~BOARD_CLK~
-Wire Wire Line
-	1600 5800 1600 5750
 Text Notes 12250 10300 0    50   ~ 0
 TODO: sketch out a timing diagram \nwrt the ROM copy counter\nand ROM read / RAM write
 Text Notes 14900 9950 0    50   ~ 0
@@ -3845,7 +3787,7 @@ U 1 1 78215C81
 P 15650 8250
 F 0 "R5" H 15720 8296 50  0000 L CNN
 F 1 "1k" H 15720 8205 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 15580 8250 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 15580 8250 50  0001 C CNN
 F 3 "~" H 15650 8250 50  0001 C CNN
 	1    15650 8250
 	1    0    0    -1  
@@ -4610,25 +4552,14 @@ Wire Wire Line
 Text GLabel 1050 8950 0    50   Input ~ 0
 PHI_2
 $Comp
-L 74xx:74LS32 U8
-U 3 1 5FB5F852
-P 1500 5450
-F 0 "U8" H 1500 5775 50  0000 C CNN
-F 1 "74AHC32" H 1500 5684 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 1500 5450 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74AHC32" H 1500 5450 50  0001 C CNN
-	3    1500 5450
-	0    -1   -1   0   
-$EndComp
-$Comp
 L 74xx:74LS74 U5
 U 2 1 61466C4F
-P 9500 10400
-F 0 "U5" H 9500 10881 50  0000 C CNN
-F 1 "74AHC74" H 9500 10790 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 9500 10400 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/sn74ahc74.pdf" H 9500 10400 50  0001 C CNN
-	2    9500 10400
+P -1500 5800
+F 0 "U5" H -1500 6281 50  0000 C CNN
+F 1 "74AHC74" H -1500 6190 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H -1500 5800 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/sn74ahc74.pdf" H -1500 5800 50  0001 C CNN
+	2    -1500 5800
 	1    0    0    -1  
 $EndComp
 Text GLabel 21900 8500 0    50   Input ~ 0
@@ -4668,27 +4599,27 @@ F 3 "~" H -2250 7800 50  0001 C CNN
 	1    -2250 7800
 	1    0    0    -1  
 $EndComp
-NoConn ~ -4900 7700
+NoConn ~ -5750 4600
 $Comp
 L power:GND #gnd0104
 U 1 1 64ABAEE7
-P -5500 7600
-F 0 "#gnd0104" H -5500 7350 50  0001 C CNN
-F 1 "GND" H -5495 7427 50  0000 C CNN
-F 2 "" H -5500 7600 50  0001 C CNN
-F 3 "" H -5500 7600 50  0001 C CNN
-	1    -5500 7600
+P -6350 4500
+F 0 "#gnd0104" H -6350 4250 50  0001 C CNN
+F 1 "GND" H -6345 4327 50  0000 C CNN
+F 2 "" H -6350 4500 50  0001 C CNN
+F 3 "" H -6350 4500 50  0001 C CNN
+	1    -6350 4500
 	0    1    1    0   
 $EndComp
 $Comp
 L power:GND #gnd0105
 U 1 1 64ABB719
-P -5500 7800
-F 0 "#gnd0105" H -5500 7550 50  0001 C CNN
-F 1 "GND" H -5495 7627 50  0000 C CNN
-F 2 "" H -5500 7800 50  0001 C CNN
-F 3 "" H -5500 7800 50  0001 C CNN
-	1    -5500 7800
+P -6350 4700
+F 0 "#gnd0105" H -6350 4450 50  0001 C CNN
+F 1 "GND" H -6345 4527 50  0000 C CNN
+F 2 "" H -6350 4700 50  0001 C CNN
+F 3 "" H -6350 4700 50  0001 C CNN
+	1    -6350 4700
 	0    1    1    0   
 $EndComp
 $Comp
@@ -4724,16 +4655,215 @@ Wire Wire Line
 $Comp
 L 74xx:74LS00 U6
 U 3 1 5FB6B2F1
-P -5200 7700
-F 0 "U6" H -5250 7800 50  0000 C CNN
-F 1 "74AHC00" H -5200 7700 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H -5200 7700 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74AHC00" H -5200 7700 50  0001 C CNN
-	3    -5200 7700
+P -6050 4600
+F 0 "U6" H -6100 4700 50  0000 C CNN
+F 1 "74AHC00" H -6050 4600 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H -6050 4600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74AHC00" H -6050 4600 50  0001 C CNN
+	3    -6050 4600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	11500 4250 11550 4250
+$Comp
+L 74xx:74LS32 U8
+U 3 1 5FB5F852
+P 1500 5450
+F 0 "U8" H 1500 5775 50  0000 C CNN
+F 1 "74AHC32" H 1500 5684 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 1500 5450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74AHC32" H 1500 5450 50  0001 C CNN
+	3    1500 5450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1600 5800 1600 5750
+Text GLabel 1600 5800 3    50   Input ~ 0
+~BOARD_CLK~
+Text GLabel 1400 5800 3    50   Input ~ 0
+~BUS_STATUS_W~
+Wire Wire Line
+	1400 5800 1400 5750
+Wire Wire Line
+	1300 5050 1600 5050
+Wire Wire Line
+	1600 5150 1500 5150
+Text Notes 1000 6000 1    50   ~ 0
+records if we're currently addressing the\nbus or HI_MEM with 8000-afff
+Wire Wire Line
+	2200 5250 2250 5250
+Wire Wire Line
+	2200 5050 2250 5050
+Text GLabel 2250 5050 2    50   Input ~ 0
+BUS_ACTIVE
+Text GLabel 2250 5250 2    50   Input ~ 0
+~BUS_ACTIVE~
+Text Notes 1500 4550 0    50   ~ 10
+Hi-mem/bus switch
+Wire Bus Line
+	1200 4850 1200 4950
+Text Label 1300 5050 0    50   ~ 0
+d7
+Text GLabel 1200 4850 1    50   Input ~ 0
+DATA_MEM
+Entry Wire Line
+	1300 5050 1200 4950
+$Comp
+L 74xx:74LS74 U5
+U 1 1 64FCA27C
+P 1900 5150
+F 0 "U5" H 1900 5631 50  0000 C CNN
+F 1 "74AHC74" H 1900 5540 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 1900 5150 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/sn74ahc74.pdf" H 1900 5150 50  0001 C CNN
+	1    1900 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 5500 1900 5450
+$Comp
+L power:+5V #5v018
+U 1 1 63286462
+P 1900 4850
+F 0 "#5v018" H 1900 4700 50  0001 C CNN
+F 1 "+5V" H 1900 4850 50  0000 L CNN
+F 2 "" H 1900 4850 50  0001 C CNN
+F 3 "" H 1900 4850 50  0001 C CNN
+	1    1900 4850
+	1    0    0    -1  
+$EndComp
+Text GLabel 1900 5500 3    50   Input ~ 0
+~MP_RST~
+$Comp
+L 74xx:74LS74 U2
+U 1 1 679E2AB0
+P 9500 10400
+F 0 "U2" H 9500 10881 50  0000 C CNN
+F 1 "74AHC74" H 9500 10790 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 9500 10400 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/sn74ahc74.pdf" H 9500 10400 50  0001 C CNN
+	1    9500 10400
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS74 U2
+U 3 1 679E5BFF
+P -1100 4300
+F 0 "U2" H -1200 4350 50  0000 L CNN
+F 1 "74AHC74" H -1250 4250 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H -1100 4300 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/sn74ahc74.pdf" H -1100 4300 50  0001 C CNN
+	3    -1100 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #5v01
+U 1 1 679E5C05
+P -1100 3900
+F 0 "#5v01" H -1100 3750 50  0001 C CNN
+F 1 "+5V" H -1012 3937 50  0000 L CNN
+F 2 "" H -1100 3900 50  0001 C CNN
+F 3 "" H -1100 3900 50  0001 C CNN
+	1    -1100 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #gnd01
+U 1 1 679E5C0B
+P -1100 4700
+F 0 "#gnd01" H -1100 4450 50  0001 C CNN
+F 1 "GND" H -1095 4527 50  0000 C CNN
+F 2 "" H -1100 4700 50  0001 C CNN
+F 3 "" H -1100 4700 50  0001 C CNN
+	1    -1100 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small CB2
+U 1 1 679E5C11
+P -800 4300
+F 0 "CB2" H -708 4346 50  0000 L CNN
+F 1 "0.1μF" H -708 4255 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm" H -800 4300 50  0001 C CNN
+F 3 "~" H -800 4300 50  0001 C CNN
+	1    -800 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	-1100 3900 -800 3900
+Wire Wire Line
+	-800 3900 -800 4200
+Connection ~ -1100 3900
+Wire Wire Line
+	-800 4400 -800 4700
+Wire Wire Line
+	-800 4700 -1100 4700
+Connection ~ -1100 4700
+NoConn ~ -250 6650
+NoConn ~ -250 6850
+$Comp
+L power:GND #gnd0106
+U 1 1 67B97637
+P -1050 7050
+F 0 "#gnd0106" H -1050 6800 50  0001 C CNN
+F 1 "GND" H -1045 6877 50  0000 C CNN
+F 2 "" H -1050 7050 50  0001 C CNN
+F 3 "" H -1050 7050 50  0001 C CNN
+	1    -1050 7050
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS74 U2
+U 2 1 679E13D6
+P -550 6750
+F 0 "U2" H -550 7231 50  0000 C CNN
+F 1 "74AHC74" H -550 7140 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H -550 6750 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/sn74ahc74.pdf" H -550 6750 50  0001 C CNN
+	2    -550 6750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	-550 7050 -850 7050
+Wire Wire Line
+	-850 6650 -850 6750
+Connection ~ -850 7050
+Wire Wire Line
+	-850 7050 -1050 7050
+Connection ~ -850 6750
+Wire Wire Line
+	-850 6750 -850 7050
+Wire Wire Line
+	-850 6650 -850 6450
+Wire Wire Line
+	-850 6450 -550 6450
+Connection ~ -850 6650
+$Comp
+L power:GND #gnd0107
+U 1 1 67F767D4
+P -1800 6100
+F 0 "#gnd0107" H -1800 5850 50  0001 C CNN
+F 1 "GND" H -1795 5927 50  0000 C CNN
+F 2 "" H -1800 6100 50  0001 C CNN
+F 3 "" H -1800 6100 50  0001 C CNN
+	1    -1800 6100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	-1800 5700 -1800 5800
+Connection ~ -1800 5800
+Wire Wire Line
+	-1800 5800 -1800 6100
+Wire Wire Line
+	-1800 6100 -1500 6100
+Connection ~ -1800 6100
+Wire Wire Line
+	-1800 5700 -1800 5500
+Wire Wire Line
+	-1800 5500 -1500 5500
+Connection ~ -1800 5700
+NoConn ~ -1200 5700
+NoConn ~ -1200 5900
 Wire Wire Line
 	21150 7600 21950 7600
 Wire Bus Line
