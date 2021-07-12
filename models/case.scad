@@ -245,7 +245,10 @@ module backplane() {
 eurocard_depth = 160.00;
 eurocard_height = 100.00;
 
+// TODO: validate this measurement
 din_connector_allowance = (backplane_rear_to_back_panel_inner - pcb_thickness - eurocard_depth);
+
+echo("din_connector_allowance", din_connector_allowance);
 
 din_male_width = 94.00;
 din_male_height = 11.00;
@@ -487,6 +490,17 @@ module front_panel_pcb() {
   }
 }
 
+// connector_pcb_length = fp_pcb_to_backplane_inner - 2 * din_connector_allowance;
+connector_pcb_length = 26.00;
+echo("connector_pcb_length", connector_pcb_length);
+
+module connector_pcb() {
+  translate([connector_card_x_offset, (total_height - eurocard_height) / 2, front_panel_pcb_z_offset + pcb_thickness + din_connector_allowance]) {
+    cube([pcb_thickness, eurocard_height, connector_pcb_length]);
+  }
+}
+
+
 translate([-(total_width/2),-(total_height/2),-(total_depth/2)]) {
   front_and_rear_panels();
   top_and_bottom_panels();
@@ -495,4 +509,5 @@ translate([-(total_width/2),-(total_height/2),-(total_depth/2)]) {
   eurocards();
   support_rods();
   large_lcd();
+  connector_pcb();
 }

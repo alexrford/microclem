@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name Connector_DIN)(type KiCad)(uri /Users/alex/microclem/hardware/arduino/Connector_DIN.pretty)(options "")(descr ""))
+)
