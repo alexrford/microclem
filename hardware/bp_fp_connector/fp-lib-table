@@ -1,0 +1,6 @@
+(fp_lib_table
+  (lib (name rails)(type KiCad)(uri ${KIPRJMOD}/rails.pretty)(options "")(descr ""))
+  (lib (name graphics)(type KiCad)(uri ${KIPRJMOD}/graphics.pretty)(options "")(descr ""))
+  (lib (name Connector_DIN)(type KiCad)(uri ${KIPRJMOD}/Connector_DIN.pretty)(options "")(descr ""))
+  (lib (name din61412)(type KiCad)(uri ${KIPRJMOD}/din61412.pretty)(options "")(descr ""))
+)
