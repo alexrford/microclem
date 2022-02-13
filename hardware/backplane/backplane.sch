@@ -3389,17 +3389,6 @@ Text GLabel 3950 7050 0    50   Input ~ 0
 Wire Wire Line
 	4000 7050 3950 7050
 $Comp
-L 74xx:74HC00 U10
-U 5 1 684F768C
-P -1900 4150
-F 0 "U10" H -1670 4196 50  0000 L CNN
-F 1 "74HC00" H -1670 4105 50  0000 L CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H -1900 4150 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74hc00" H -1900 4150 50  0001 C CNN
-	5    -1900 4150
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C CBU10
 U 1 1 684FC7FF
 P -2300 4150
@@ -3430,17 +3419,6 @@ F 1 "GND" H -1895 4477 50  0000 C CNN
 F 2 "" H -1900 4650 50  0001 C CNN
 F 3 "" H -1900 4650 50  0001 C CNN
 	1    -1900 4650
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74HC00 U4
-U 5 1 6C351132
-P -2200 2450
-F 0 "U4" H -1970 2496 50  0000 L CNN
-F 1 "74HC00" H -1970 2405 50  0000 L CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H -2200 2450 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74hc00" H -2200 2450 50  0001 C CNN
-	5    -2200 2450
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -3519,28 +3497,6 @@ F 3 "" H -5650 2950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx:74LS14 U1
-U 7 1 5FB55982
-P -5650 2450
-F 0 "U1" H -5700 2500 50  0000 L CNN
-F 1 "74AHC14" H -5800 2400 50  0000 L CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H -5650 2450 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74AHC14" H -5650 2450 50  0001 C CNN
-	7    -5650 2450
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS14 U1
-U 5 1 5FB52D1C
-P 3050 1800
-F 0 "U1" H 3050 2117 50  0000 C CNN
-F 1 "74AHC14" H 3050 2026 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 3050 1800 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74AHC14" H 3050 1800 50  0001 C CNN
-	5    3050 1800
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #gnd05
 U 1 1 62024CB8
 P 1700 1500
@@ -3575,17 +3531,6 @@ F 3 "~" H 1700 1400 50  0001 C CNN
 $EndComp
 Text GLabel 3150 1200 2    50   Input ~ 0
 ~RST~
-$Comp
-L 74xx:74LS14 U1
-U 4 1 5FB510D6
-P 2800 1200
-F 0 "U1" H 2800 1517 50  0000 C CNN
-F 1 "74AHC14" H 2800 1426 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 2800 1200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74AHC14" H 2800 1200 50  0001 C CNN
-	4    2800 1200
-	1    0    0    -1  
-$EndComp
 Text GLabel 3400 1800 2    50   Input ~ 0
 ~CLK_RST~
 $Comp
@@ -3619,17 +3564,6 @@ F 1 "100k" H 2070 1555 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 1930 1600 50  0001 C CNN
 F 3 "~" H 2000 1600 50  0001 C CNN
 	1    2000 1600
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS08 U2
-U 5 1 61B184DE
-P -4500 2400
-F 0 "U2" H -4600 2450 50  0000 L CNN
-F 1 "74AHC08" H -4650 2350 50  0000 L CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H -4500 2400 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74AHC08" H -4500 2400 50  0001 C CNN
-	5    -4500 2400
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -3687,53 +3621,9 @@ Wire Wire Line
 	2000 1900 2000 1800
 Text GLabel 1050 1500 0    50   Input ~ 0
 ~RST_HDR~
-$Comp
-L 74xx:74LS14 U1
-U 3 1 64C1E3B8
-P 2200 1200
-F 0 "U1" H 2200 1517 50  0000 C CNN
-F 1 "74AHC14" H 2200 1426 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 2200 1200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74AHC14" H 2200 1200 50  0001 C CNN
-	3    2200 1200
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS14 U1
-U 6 1 65EE41C1
-P 2450 1800
-F 0 "U1" H 2450 2000 50  0000 C CNN
-F 1 "74AHC14" H 2450 1600 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 2450 1800 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74AHC14" H 2450 1800 50  0001 C CNN
-	6    2450 1800
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1350 1500 1350 1400
 Connection ~ 1350 1500
-$Comp
-L 74xx:74LS14 U1
-U 1 1 5FB4A682
-P 6050 1600
-F 0 "U1" H 6050 1917 50  0000 C CNN
-F 1 "74AHC14" H 6050 1826 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 6050 1600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74AHC14" H 6050 1600 50  0001 C CNN
-	1    6050 1600
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS14 U1
-U 2 1 5FB4B0E1
-P 6050 2700
-F 0 "U1" H 6050 3017 50  0000 C CNN
-F 1 "74AHC14" H 6050 2926 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 6050 2700 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74AHC14" H 6050 2700 50  0001 C CNN
-	2    6050 2700
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	-4200 2350 -4200 1900
 Wire Wire Line
@@ -3875,17 +3765,6 @@ BASE_CLK
 Wire Wire Line
 	4600 7150 4850 7150
 $Comp
-L 74xx:74LS08 U2
-U 4 1 68054532
-P 12850 3800
-F 0 "U2" H 12850 4125 50  0000 C CNN
-F 1 "74AHC08" H 12850 4034 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 12850 3800 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74AHC08" H 12850 3800 50  0001 C CNN
-	4    12850 3800
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #gnd0107
 U 1 1 873FDC3F
 P 12550 3050
@@ -3922,23 +3801,12 @@ Text GLabel 4800 7350 0    50   Input ~ 0
 Wire Wire Line
 	4800 7350 4850 7350
 $Comp
-L 74xx:74LS08 U2
-U 3 1 61B1258C
-P 12850 2950
-F 0 "U2" H 12850 3275 50  0000 C CNN
-F 1 "74AHC08" H 12850 3184 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 12850 2950 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74AHC08" H 12850 2950 50  0001 C CNN
-	3    12850 2950
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector:Conn_Coaxial_Power J10
 U 1 1 8E9007D5
 P 10100 4500
 F 0 "J10" H 10188 4496 50  0000 L CNN
 F 1 "Conn_Coaxial_Power" H 10188 4405 50  0000 L CNN
-F 2 "Connector_Phoenix_MSTB:PhoenixContact_MSTBVA_2,5_2-G-5,08_1x02_P5.08mm_Vertical" H 10100 4450 50  0001 C CNN
+F 2 "Connector_AMASS:AMASS_XT60-M_1x02_P7.20mm_Vertical" H 10100 4450 50  0001 C CNN
 F 3 "~" H 10100 4450 50  0001 C CNN
 	1    10100 4500
 	1    0    0    -1  
@@ -4401,61 +4269,6 @@ Wire Wire Line
 Wire Wire Line
 	1350 1500 1550 1500
 $Comp
-L 74xx:74LS08 U2
-U 2 1 61B10E2C
-P 5600 2350
-F 0 "U2" H 5600 2675 50  0000 C CNN
-F 1 "74AHC08" H 5600 2584 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 5600 2350 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74AHC08" H 5600 2350 50  0001 C CNN
-	2    5600 2350
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS08 U2
-U 1 1 61B0B1BD
-P 12750 1500
-F 0 "U2" H 12750 1825 50  0000 C CNN
-F 1 "74AHC08" H 12750 1734 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 12750 1500 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74AHC08" H 12750 1500 50  0001 C CNN
-	1    12750 1500
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS74 U3
-U 3 1 A6FFC4E3
-P -3350 2450
-F 0 "U3" H -3120 2496 50  0000 L CNN
-F 1 "74AHC74" H -3120 2405 50  0000 L CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H -3350 2450 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/sn74ahc74.pdf" H -3350 2450 50  0001 C CNN
-	3    -3350 2450
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS74 U3
-U 2 1 A6FF8828
-P 7550 1350
-F 0 "U3" H 7550 1831 50  0000 C CNN
-F 1 "74AHC74" H 7550 1740 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7550 1350 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/sn74ahc74.pdf" H 7550 1350 50  0001 C CNN
-	2    7550 1350
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS74 U3
-U 1 1 A6FF7C14
-P 6650 1350
-F 0 "U3" H 6650 1831 50  0000 C CNN
-F 1 "74AHC74" H 6650 1740 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 6650 1350 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/sn74ahc74.pdf" H 6650 1350 50  0001 C CNN
-	1    6650 1350
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C CBU3
 U 1 1 A7164630
 P -3750 2450
@@ -4498,39 +4311,6 @@ F 3 "" H -3350 2850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ -3350 2850
-$Comp
-L 74xx:74LS74 U5
-U 3 1 A7428FB5
-P -900 2500
-F 0 "U5" H -670 2546 50  0000 L CNN
-F 1 "74AHC74" H -670 2455 50  0000 L CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H -900 2500 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/sn74ahc74.pdf" H -900 2500 50  0001 C CNN
-	3    -900 2500
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS74 U5
-U 2 1 A7428FBB
-P 7550 2450
-F 0 "U5" H 7550 2931 50  0000 C CNN
-F 1 "74AHC74" H 7550 2840 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7550 2450 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/sn74ahc74.pdf" H 7550 2450 50  0001 C CNN
-	2    7550 2450
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS74 U5
-U 1 1 A7428FC1
-P 6650 2450
-F 0 "U5" H 6650 2931 50  0000 C CNN
-F 1 "74AHC74" H 6650 2840 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 6650 2450 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/sn74ahc74.pdf" H 6650 2450 50  0001 C CNN
-	1    6650 2450
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:C CBU5
 U 1 1 A7428FC7
@@ -4703,61 +4483,6 @@ Wire Wire Line
 Wire Wire Line
 	5200 1800 5200 1350
 $Comp
-L 74xx:74LS02 U6
-U 1 1 AE48FD88
-P 5600 1250
-F 0 "U6" H 5600 1575 50  0000 C CNN
-F 1 "74AHC02" H 5600 1484 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 5600 1250 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/sn74ahc02.pdf" H 5600 1250 50  0001 C CNN
-	1    5600 1250
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS02 U6
-U 2 1 AE49B799
-P 14150 1650
-F 0 "U6" H 14150 1975 50  0000 C CNN
-F 1 "74AHC02" H 14150 1884 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 14150 1650 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/sn74ahc02.pdf" H 14150 1650 50  0001 C CNN
-	2    14150 1650
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS02 U6
-U 3 1 AE49F624
-P 14150 2200
-F 0 "U6" H 14150 2525 50  0000 C CNN
-F 1 "74AHC02" H 14150 2434 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 14150 2200 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/sn74ahc02.pdf" H 14150 2200 50  0001 C CNN
-	3    14150 2200
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS02 U6
-U 4 1 AE4A1445
-P 14150 2750
-F 0 "U6" H 14150 3075 50  0000 C CNN
-F 1 "74AHC02" H 14150 2984 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 14150 2750 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/sn74ahc02.pdf" H 14150 2750 50  0001 C CNN
-	4    14150 2750
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS02 U6
-U 5 1 AE4A3E0A
-P -5350 4150
-F 0 "U6" H -5120 4196 50  0000 L CNN
-F 1 "74AHC02" H -5120 4105 50  0000 L CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H -5350 4150 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/sn74ahc02.pdf" H -5350 4150 50  0001 C CNN
-	5    -5350 4150
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C CBU6
 U 1 1 AE4AA34E
 P -5750 4150
@@ -4910,28 +4635,6 @@ F 3 "~" H -800 4100 50  0001 C CNN
 	1    -800 4100
 	1    0    0    -1  
 $EndComp
-$Comp
-L 74xx:74HC00 U4
-U 1 1 6C676BAD
-P 5150 7250
-F 0 "U4" H 5150 7575 50  0000 C CNN
-F 1 "74HC00" H 5150 7484 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 5150 7250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 5150 7250 50  0001 C CNN
-	1    5150 7250
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74HC00 U4
-U 2 1 6C6777AD
-P 5750 7250
-F 0 "U4" H 5750 7575 50  0000 C CNN
-F 1 "74HC00" H 5750 7484 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 5750 7250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 5750 7250 50  0001 C CNN
-	2    5750 7250
-	1    0    0    -1  
-$EndComp
 NoConn ~ 4000 4000
 $Comp
 L Oscillator:CXO_DIP8 X1
@@ -4974,72 +4677,6 @@ Text GLabel 4650 4000 2    50   Input ~ 0
 XO
 Wire Wire Line
 	4650 4000 4600 4000
-$Comp
-L 74xx:74HC00 U4
-U 4 1 6C569F76
-P 16350 1700
-F 0 "U4" H 16350 2025 50  0000 C CNN
-F 1 "74HC00" H 16350 1934 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 16350 1700 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 16350 1700 50  0001 C CNN
-	4    16350 1700
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74HC00 U8
-U 4 1 B8321907
-P 15250 1700
-F 0 "U8" H 15250 2025 50  0000 C CNN
-F 1 "74HC00" H 15250 1934 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 15250 1700 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 15250 1700 50  0001 C CNN
-	4    15250 1700
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74HC00 U8
-U 3 1 B832190D
-P 9000 1800
-F 0 "U8" H 9000 2125 50  0000 C CNN
-F 1 "74HC00" H 9000 2034 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 9000 1800 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 9000 1800 50  0001 C CNN
-	3    9000 1800
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74HC00 U8
-U 1 1 B84AAC05
-P 8400 1150
-F 0 "U8" H 8400 1475 50  0000 C CNN
-F 1 "74HC00" H 8400 1384 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 8400 1150 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 8400 1150 50  0001 C CNN
-	1    8400 1150
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74HC00 U8
-U 2 1 B84AAC0B
-P 8400 2450
-F 0 "U8" H 8400 2775 50  0000 C CNN
-F 1 "74HC00" H 8400 2684 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 8400 2450 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 8400 2450 50  0001 C CNN
-	2    8400 2450
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74HC00 U8
-U 5 1 B8AC50A9
-P -3200 4150
-F 0 "U8" H -2970 4196 50  0000 L CNN
-F 1 "74HC00" H -2970 4105 50  0000 L CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H -3200 4150 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74hc00" H -3200 4150 50  0001 C CNN
-	5    -3200 4150
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:C CBU8
 U 1 1 B8AC50AF
@@ -5196,7 +4833,7 @@ U 1 1 610FD02B
 P 7600 6050
 F 0 "Q2" H 7805 6096 50  0000 L CNN
 F 1 "BUZ11" H 7805 6005 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown" H 7850 5975 50  0001 L CIN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 7850 5975 50  0001 L CIN
 F 3 "https://media.digikey.com/pdf/Data%20Sheets/Fairchild%20PDFs/BUZ11.pdf" H 7600 6050 50  0001 L CNN
 	1    7600 6050
 	-1   0    0    1   
@@ -5342,7 +4979,7 @@ U 1 1 60AF6494
 P 7400 5600
 F 0 "Q1" V 7649 5600 50  0000 C CNN
 F 1 "FQP27P06" V 7740 5600 50  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown" H 7600 5525 50  0001 L CIN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 7600 5525 50  0001 L CIN
 F 3 "https://www.onsemi.com/pub/Collateral/FQP27P06-D.PDF" H 7400 5600 50  0001 L CNN
 	1    7400 5600
 	0    -1   -1   0   
@@ -5588,28 +5225,6 @@ F 3 "~" H 1350 1900 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1050 1500 1350 1500
-$Comp
-L 74xx:74HC00 U10
-U 3 1 684F3F5A
-P 3500 5300
-F 0 "U10" H 3500 5625 50  0000 C CNN
-F 1 "74HC00" H 3500 5534 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 3500 5300 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 3500 5300 50  0001 C CNN
-	3    3500 5300
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74HC00 U10
-U 4 1 684F5D5E
-P 3500 6050
-F 0 "U10" H 3500 6375 50  0000 C CNN
-F 1 "74HC00" H 3500 6284 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 3500 6050 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 3500 6050 50  0001 C CNN
-	4    3500 6050
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2450 5400 2600 5400
 Wire Wire Line
@@ -5620,17 +5235,6 @@ Wire Wire Line
 	2450 5400 2450 5600
 Connection ~ 2450 5400
 Connection ~ 2450 5950
-$Comp
-L 74xx:74HC00 U10
-U 2 1 684F220F
-P 2150 5950
-F 0 "U10" H 2150 6275 50  0000 C CNN
-F 1 "74HC00" H 2150 6184 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 2150 5950 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 2150 5950 50  0001 C CNN
-	2    2150 5950
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2450 5600 1700 5600
 Wire Wire Line
@@ -5643,17 +5247,6 @@ Wire Wire Line
 	1750 5500 1750 5700
 Wire Wire Line
 	1750 5700 2450 5700
-$Comp
-L 74xx:74HC00 U10
-U 1 1 684EEA7F
-P 2150 5400
-F 0 "U10" H 2150 5725 50  0000 C CNN
-F 1 "74HC00" H 2150 5634 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 2150 5400 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 2150 5400 50  0001 C CNN
-	1    2150 5400
-	1    0    0    -1  
-$EndComp
 $Comp
 L Switch:SW_SPDT SW3
 U 1 1 6ABCF89F
@@ -5893,17 +5486,6 @@ $EndComp
 Connection ~ 2400 3600
 Wire Wire Line
 	2700 3250 2700 3450
-$Comp
-L Timer:NE556 U7
-U 1 1 67DE4241
-P 1850 4150
-F 0 "U7" H 1850 4731 50  0000 C CNN
-F 1 "NE556" H 1850 4640 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 1850 4150 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/ne556.pdf" H 1850 4150 50  0001 C CNN
-	1    1850 4150
-	1    0    0    -1  
-$EndComp
 Connection ~ 2350 4350
 Text GLabel 2700 5600 2    50   Input ~ 0
 SEL_AST
@@ -5915,29 +5497,7 @@ Wire Wire Line
 	3800 5750 3800 6050
 Text GLabel 2700 5800 2    50   Input ~ 0
 SEL_MONO
-$Comp
-L 74xx:74HC00 U4
-U 3 1 6C569F70
-P 4100 5650
-F 0 "U4" H 4100 5975 50  0000 C CNN
-F 1 "74HC00" H 4100 5884 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 4100 5650 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 4100 5650 50  0001 C CNN
-	3    4100 5650
-	1    0    0    -1  
-$EndComp
 Connection ~ 2500 7350
-$Comp
-L Timer:NE556 U7
-U 2 1 67DE4CF7
-P 2000 7150
-F 0 "U7" H 2000 7731 50  0000 C CNN
-F 1 "NE556" H 2000 7640 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 2000 7150 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/ne556.pdf" H 2000 7150 50  0001 C CNN
-	2    2000 7150
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2500 7250 2500 7350
 Connection ~ 2500 7250
@@ -6192,7 +5752,7 @@ U 1 1 6743CEED
 P 8200 4100
 F 0 "Q3" V 8449 4100 50  0000 C CNN
 F 1 "FQP27P06" V 8540 4100 50  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown" H 8400 4025 50  0001 L CIN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 8400 4025 50  0001 L CIN
 F 3 "https://www.onsemi.com/pub/Collateral/FQP27P06-D.PDF" H 8200 4100 50  0001 L CNN
 	1    8200 4100
 	0    -1   -1   0   
@@ -6230,4 +5790,444 @@ Text Notes 6450 600  0    50   ~ 10
 Clock switcher
 Text Notes 3250 1600 0    50   ~ 0
 shorter clock rst pulse s.t. \nclock starts before other ICs
+$Comp
+L Timer:NE556 U7
+U 2 1 67DE4CF7
+P 2000 7150
+F 0 "U7" H 2000 7731 50  0000 C CNN
+F 1 "NE556" H 2000 7640 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 2000 7150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ne556.pdf" H 2000 7150 50  0001 C CNN
+	2    2000 7150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Timer:NE556 U7
+U 1 1 67DE4241
+P 1850 4150
+F 0 "U7" H 1850 4731 50  0000 C CNN
+F 1 "NE556" H 1850 4640 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 1850 4150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ne556.pdf" H 1850 4150 50  0001 C CNN
+	1    1850 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC00 U8
+U 2 1 B84AAC0B
+P 8400 2450
+F 0 "U8" H 8400 2775 50  0000 C CNN
+F 1 "74HC00" H 8400 2684 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 8400 2450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 8400 2450 50  0001 C CNN
+	2    8400 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC00 U8
+U 1 1 B84AAC05
+P 8400 1150
+F 0 "U8" H 8400 1475 50  0000 C CNN
+F 1 "74HC00" H 8400 1384 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 8400 1150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 8400 1150 50  0001 C CNN
+	1    8400 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC00 U8
+U 3 1 B832190D
+P 9000 1800
+F 0 "U8" H 9000 2125 50  0000 C CNN
+F 1 "74HC00" H 9000 2034 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 9000 1800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 9000 1800 50  0001 C CNN
+	3    9000 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC00 U8
+U 4 1 B8321907
+P 15250 1700
+F 0 "U8" H 15250 2025 50  0000 C CNN
+F 1 "74HC00" H 15250 1934 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 15250 1700 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 15250 1700 50  0001 C CNN
+	4    15250 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC00 U8
+U 5 1 B8AC50A9
+P -3200 4150
+F 0 "U8" H -2970 4196 50  0000 L CNN
+F 1 "74HC00" H -2970 4105 50  0000 L CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H -3200 4150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc00" H -3200 4150 50  0001 C CNN
+	5    -3200 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS02 U6
+U 4 1 AE4A1445
+P 14150 2750
+F 0 "U6" H 14150 3075 50  0000 C CNN
+F 1 "74AHC02" H 14150 2984 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 14150 2750 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/sn74ahc02.pdf" H 14150 2750 50  0001 C CNN
+	4    14150 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS02 U6
+U 3 1 AE49F624
+P 14150 2200
+F 0 "U6" H 14150 2525 50  0000 C CNN
+F 1 "74AHC02" H 14150 2434 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 14150 2200 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/sn74ahc02.pdf" H 14150 2200 50  0001 C CNN
+	3    14150 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS02 U6
+U 2 1 AE49B799
+P 14150 1650
+F 0 "U6" H 14150 1975 50  0000 C CNN
+F 1 "74AHC02" H 14150 1884 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 14150 1650 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/sn74ahc02.pdf" H 14150 1650 50  0001 C CNN
+	2    14150 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS02 U6
+U 1 1 AE48FD88
+P 5600 1250
+F 0 "U6" H 5600 1575 50  0000 C CNN
+F 1 "74AHC02" H 5600 1484 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 5600 1250 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/sn74ahc02.pdf" H 5600 1250 50  0001 C CNN
+	1    5600 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS02 U6
+U 5 1 AE4A3E0A
+P -5350 4150
+F 0 "U6" H -5120 4196 50  0000 L CNN
+F 1 "74AHC02" H -5120 4105 50  0000 L CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H -5350 4150 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/sn74ahc02.pdf" H -5350 4150 50  0001 C CNN
+	5    -5350 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS14 U1
+U 2 1 5FB4B0E1
+P 6050 2700
+F 0 "U1" H 6050 3017 50  0000 C CNN
+F 1 "74AHC14" H 6050 2926 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 6050 2700 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74AHC14" H 6050 2700 50  0001 C CNN
+	2    6050 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS14 U1
+U 1 1 5FB4A682
+P 6050 1600
+F 0 "U1" H 6050 1917 50  0000 C CNN
+F 1 "74AHC14" H 6050 1826 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 6050 1600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74AHC14" H 6050 1600 50  0001 C CNN
+	1    6050 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS14 U1
+U 6 1 65EE41C1
+P 2450 1800
+F 0 "U1" H 2450 2000 50  0000 C CNN
+F 1 "74AHC14" H 2450 1600 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 2450 1800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74AHC14" H 2450 1800 50  0001 C CNN
+	6    2450 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS14 U1
+U 3 1 64C1E3B8
+P 2200 1200
+F 0 "U1" H 2200 1517 50  0000 C CNN
+F 1 "74AHC14" H 2200 1426 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 2200 1200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74AHC14" H 2200 1200 50  0001 C CNN
+	3    2200 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS14 U1
+U 4 1 5FB510D6
+P 2800 1200
+F 0 "U1" H 2800 1517 50  0000 C CNN
+F 1 "74AHC14" H 2800 1426 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 2800 1200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74AHC14" H 2800 1200 50  0001 C CNN
+	4    2800 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS14 U1
+U 5 1 5FB52D1C
+P 3050 1800
+F 0 "U1" H 3050 2117 50  0000 C CNN
+F 1 "74AHC14" H 3050 2026 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 3050 1800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74AHC14" H 3050 1800 50  0001 C CNN
+	5    3050 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS14 U1
+U 7 1 5FB55982
+P -5650 2450
+F 0 "U1" H -5700 2500 50  0000 L CNN
+F 1 "74AHC14" H -5800 2400 50  0000 L CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H -5650 2450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74AHC14" H -5650 2450 50  0001 C CNN
+	7    -5650 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS08 U2
+U 1 1 61B0B1BD
+P 12750 1500
+F 0 "U2" H 12750 1825 50  0000 C CNN
+F 1 "74AHC08" H 12750 1734 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 12750 1500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74AHC08" H 12750 1500 50  0001 C CNN
+	1    12750 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS08 U2
+U 2 1 61B10E2C
+P 5600 2350
+F 0 "U2" H 5600 2675 50  0000 C CNN
+F 1 "74AHC08" H 5600 2584 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 5600 2350 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74AHC08" H 5600 2350 50  0001 C CNN
+	2    5600 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS08 U2
+U 3 1 61B1258C
+P 12850 2950
+F 0 "U2" H 12850 3275 50  0000 C CNN
+F 1 "74AHC08" H 12850 3184 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 12850 2950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74AHC08" H 12850 2950 50  0001 C CNN
+	3    12850 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS08 U2
+U 4 1 68054532
+P 12850 3800
+F 0 "U2" H 12850 4125 50  0000 C CNN
+F 1 "74AHC08" H 12850 4034 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 12850 3800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74AHC08" H 12850 3800 50  0001 C CNN
+	4    12850 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS08 U2
+U 5 1 61B184DE
+P -4500 2400
+F 0 "U2" H -4600 2450 50  0000 L CNN
+F 1 "74AHC08" H -4650 2350 50  0000 L CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H -4500 2400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74AHC08" H -4500 2400 50  0001 C CNN
+	5    -4500 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS74 U3
+U 1 1 A6FF7C14
+P 6650 1350
+F 0 "U3" H 6650 1831 50  0000 C CNN
+F 1 "74AHC74" H 6650 1740 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 6650 1350 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/sn74ahc74.pdf" H 6650 1350 50  0001 C CNN
+	1    6650 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS74 U3
+U 2 1 A6FF8828
+P 7550 1350
+F 0 "U3" H 7550 1831 50  0000 C CNN
+F 1 "74AHC74" H 7550 1740 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7550 1350 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/sn74ahc74.pdf" H 7550 1350 50  0001 C CNN
+	2    7550 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS74 U3
+U 3 1 A6FFC4E3
+P -3350 2450
+F 0 "U3" H -3120 2496 50  0000 L CNN
+F 1 "74AHC74" H -3120 2405 50  0000 L CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H -3350 2450 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/sn74ahc74.pdf" H -3350 2450 50  0001 C CNN
+	3    -3350 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC00 U4
+U 3 1 6C569F70
+P 4100 5650
+F 0 "U4" H 4100 5975 50  0000 C CNN
+F 1 "74HC00" H 4100 5884 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 4100 5650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 4100 5650 50  0001 C CNN
+	3    4100 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC00 U4
+U 4 1 6C569F76
+P 16350 1700
+F 0 "U4" H 16350 2025 50  0000 C CNN
+F 1 "74HC00" H 16350 1934 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 16350 1700 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 16350 1700 50  0001 C CNN
+	4    16350 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC00 U4
+U 2 1 6C6777AD
+P 5750 7250
+F 0 "U4" H 5750 7575 50  0000 C CNN
+F 1 "74HC00" H 5750 7484 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 5750 7250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 5750 7250 50  0001 C CNN
+	2    5750 7250
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC00 U4
+U 1 1 6C676BAD
+P 5150 7250
+F 0 "U4" H 5150 7575 50  0000 C CNN
+F 1 "74HC00" H 5150 7484 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 5150 7250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 5150 7250 50  0001 C CNN
+	1    5150 7250
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC00 U4
+U 5 1 6C351132
+P -2200 2450
+F 0 "U4" H -1970 2496 50  0000 L CNN
+F 1 "74HC00" H -1970 2405 50  0000 L CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H -2200 2450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc00" H -2200 2450 50  0001 C CNN
+	5    -2200 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS74 U5
+U 1 1 A7428FC1
+P 6650 2450
+F 0 "U5" H 6650 2931 50  0000 C CNN
+F 1 "74AHC74" H 6650 2840 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 6650 2450 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/sn74ahc74.pdf" H 6650 2450 50  0001 C CNN
+	1    6650 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS74 U5
+U 2 1 A7428FBB
+P 7550 2450
+F 0 "U5" H 7550 2931 50  0000 C CNN
+F 1 "74AHC74" H 7550 2840 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7550 2450 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/sn74ahc74.pdf" H 7550 2450 50  0001 C CNN
+	2    7550 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS74 U5
+U 3 1 A7428FB5
+P -900 2500
+F 0 "U5" H -670 2546 50  0000 L CNN
+F 1 "74AHC74" H -670 2455 50  0000 L CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H -900 2500 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/sn74ahc74.pdf" H -900 2500 50  0001 C CNN
+	3    -900 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC00 U10
+U 1 1 684EEA7F
+P 2150 5400
+F 0 "U10" H 2150 5725 50  0000 C CNN
+F 1 "74HC00" H 2150 5634 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 2150 5400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 2150 5400 50  0001 C CNN
+	1    2150 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC00 U10
+U 2 1 684F220F
+P 2150 5950
+F 0 "U10" H 2150 6275 50  0000 C CNN
+F 1 "74HC00" H 2150 6184 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 2150 5950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 2150 5950 50  0001 C CNN
+	2    2150 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC00 U10
+U 4 1 684F5D5E
+P 3500 6050
+F 0 "U10" H 3500 6375 50  0000 C CNN
+F 1 "74HC00" H 3500 6284 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 3500 6050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 3500 6050 50  0001 C CNN
+	4    3500 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC00 U10
+U 3 1 684F3F5A
+P 3500 5300
+F 0 "U10" H 3500 5625 50  0000 C CNN
+F 1 "74HC00" H 3500 5534 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 3500 5300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 3500 5300 50  0001 C CNN
+	3    3500 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC00 U10
+U 5 1 684F768C
+P -1900 4150
+F 0 "U10" H -1670 4196 50  0000 L CNN
+F 1 "74HC00" H -1670 4105 50  0000 L CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H -1900 4150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc00" H -1900 4150 50  0001 C CNN
+	5    -1900 4150
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
