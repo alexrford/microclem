@@ -4628,7 +4628,7 @@ U 1 1 64AD596B
 P -2750 7000
 F 0 "LOGO1" H -2503 7071 50  0000 L CNN
 F 1 "Logo_Microclem" H -2503 6980 50  0000 L CNN
-F 2 "graphics:microclem_logo_mask" H -2750 7000 50  0001 C CNN
+F 2 "graphics:microclem_logo_mask_large" H -2750 7000 50  0001 C CNN
 F 3 "~" H -2750 7000 50  0001 C CNN
 	1    -2750 7000
 	1    0    0    -1  
@@ -4916,4 +4916,26 @@ Wire Bus Line
 	21050 450  21050 5100
 Wire Bus Line
 	750  1100 750  2750
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 6210E06A
+P -3850 6200
+F 0 "H1" H -3750 6246 50  0000 L CNN
+F 1 "MountingHole" H -3750 6155 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" H -3850 6200 50  0001 C CNN
+F 3 "~" H -3850 6200 50  0001 C CNN
+	1    -3850 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 6210E639
+P -3850 6500
+F 0 "H2" H -3750 6546 50  0000 L CNN
+F 1 "MountingHole" H -3750 6455 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" H -3850 6500 50  0001 C CNN
+F 3 "~" H -3850 6500 50  0001 C CNN
+	1    -3850 6500
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
