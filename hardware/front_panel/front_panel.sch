@@ -59,39 +59,6 @@ Connection ~ 2200 -1600
 Wire Wire Line
 	2200 -1600 2200 -1500
 $Comp
-L Display_Character:NHD-0420H1Z U1
-U 1 1 620A1A2C
-P 4450 3950
-F 0 "U1" H 4450 3950 50  0000 C CNN
-F 1 "NHD-0420H1Z" H 4450 4200 50  0000 C CNN
-F 2 "Display:NHD-0420H1Z" H 4450 3050 50  0001 C CNN
-F 3 "http://www.newhavendisplay.com/specs/NHD-0420H1Z-FSW-GBW-33V3.pdf" H 4550 3850 50  0001 C CNN
-	1    4450 3950
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VCC #PWR0103
-U 1 1 620A39AB
-P 4450 3150
-F 0 "#PWR0103" H 4450 3000 50  0001 C CNN
-F 1 "VCC" H 4465 3323 50  0000 C CNN
-F 2 "" H 4450 3150 50  0001 C CNN
-F 3 "" H 4450 3150 50  0001 C CNN
-	1    4450 3150
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0104
-U 1 1 620A4244
-P 4450 4750
-F 0 "#PWR0104" H 4450 4500 50  0001 C CNN
-F 1 "GND" H 4455 4577 50  0000 C CNN
-F 2 "" H 4450 4750 50  0001 C CNN
-F 3 "" H 4450 4750 50  0001 C CNN
-	1    4450 4750
-	1    0    0    -1  
-$EndComp
-$Comp
 L Mechanical:MountingHole H1
 U 1 1 620A5F1A
 P 600 1400
@@ -662,10 +629,43 @@ Wire Wire Line
 	8750 1050 8750 1650
 Wire Wire Line
 	8750 1650 8700 1650
+Text Notes 7550 750  0    50   ~ 0
+TODO: maybe just put front-side headers to\nconnect to button/led w/ wires
+$Comp
+L nhd0440wh:NHD-0440WH U3
+U 1 1 620C5F09
+P 5850 4000
+F 0 "U3" H 6250 4550 50  0000 C CNN
+F 1 "NHD-0440WH" H 6250 4850 50  0000 C CNN
+F 2 "nhd-0040wh:NHD-0040WH" H 5550 4950 50  0001 C CNN
+F 3 "" H 5550 4950 50  0001 C CNN
+	1    5850 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR02
+U 1 1 620C72A1
+P 5800 3100
+F 0 "#PWR02" H 5800 2950 50  0001 C CNN
+F 1 "VCC" H 5815 3273 50  0000 C CNN
+F 2 "" H 5800 3100 50  0001 C CNN
+F 3 "" H 5800 3100 50  0001 C CNN
+	1    5800 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 620C9013
+P 5800 4700
+F 0 "#PWR03" H 5800 4450 50  0001 C CNN
+F 1 "GND" H 5805 4527 50  0000 C CNN
+F 2 "" H 5800 4700 50  0001 C CNN
+F 3 "" H 5800 4700 50  0001 C CNN
+	1    5800 4700
+	1    0    0    -1  
+$EndComp
 Wire Bus Line
 	1700 5500 1700 7100
 Wire Bus Line
 	8700 3200 8700 3700
-Text Notes 7550 750  0    50   ~ 0
-TODO: maybe just put front-side headers to\nconnect to button/led w/ wires
 $EndSCHEMATC

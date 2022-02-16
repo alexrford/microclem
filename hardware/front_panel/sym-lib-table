@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name nhd0440wh)(type Legacy)(uri ${KIPRJMOD}/nhd0440wh.lib)(options "")(descr ""))
+)
